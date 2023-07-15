@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+  }
+  
+  h1,
+  label,
+  button,
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="designation"],
+  select {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .register {
+    margin-top: -105px;
+  }
+  
+  .login-container {
+    width: 100%;
+  }
+  
+  .form-container {
+    width: 60%; /* Adjust the width as desired */
+    margin: 0 auto; /* Center the form horizontally */
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    color: #626D8A;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="designation"],
+  select {
+    width: 220%;
+    padding: auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 50px;
+    color: black;
+    font-size: 16px; /* Increase the font size as desired */
+    
+  }
+  
+  input[type="submit"] {
+    background: #7BCCED;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 220%;
+    height: 42px;
+    justify-content: center;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: grey;
+  }
+  
+  #message {
+    text-align: center;
+    color: red;
+  }
+  
+  #image1 {
+    padding-bottom: 5%;
+    text-align: center; /* Center the image */
+    margin-top: -45px; /* Adjust the margin-top value as desired */
+    margin-left: 300px;
+  }
+  
+  .container {
+    margin-top: 150px;
+    width: auto;
+  }
+  
+  .button:hover {
+    background-color: black;
+  }
+  
+  #bgimage {
+    width: fit-content;
+    height: fit-content;
+    object-fit: fill;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #maincontainer {
+    margin-top: 5em;
+    display: flex; /* Use flexbox to position the elements */
+    margin-left: -10px;
+  }
+  
+  .col-lg-7 {
+    background-color: rgb(255, 255, 255);
+    flex: 0.5; /* Allow the logo image to take up available space */
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+    margin-top: -29px;
+    height:max-content;
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%; /* Adjust the width as desired */
+    height: 10%; /* Adjust the height as desired */
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  form i {
+    margin-left: -20px;
+    cursor: pointer;
+  }
+  
