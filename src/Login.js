@@ -43,6 +43,9 @@ export default function Login() {
       .then(token => {
         // Print the generated token in the console
         console.log(token);
+
+        // Store the userEmail in local storage
+        localStorage.setItem('userEmail', email);
       })
       .catch(error => {
         console.error('Error:', error);
