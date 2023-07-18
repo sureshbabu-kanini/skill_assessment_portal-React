@@ -90,10 +90,10 @@ export default function Register() {
               </p>
             </div>
             <form onSubmit={handleSubmit}>
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="UserfirstName">First Name</label>
               <input
                 type="text"
-                id="firstName"
+                id="UserfirstName"
                 name="user_FirstName"
                 placeholder="  Enter your first name"
                 value={formData.user_FirstName}
@@ -112,9 +112,9 @@ export default function Register() {
                 required
               />
 
-              <label htmlFor="department">Department</label>
+              <label htmlFor="Userdepartment">Department</label>
               <select
-                id="department"
+                id="Userdepartment"
                 name="user_Departmenr"
                 value={formData.user_Departmenr}
                 onChange={handleChange}
@@ -147,9 +147,9 @@ export default function Register() {
                 required
               />
 
-              <label htmlFor="gender">Gender</label>
+              <label htmlFor="genderName">Gender</label>
               <select
-                id="gender"
+                id="genderName"
                 name="user_Gender"
                 value={formData.user_Gender}
                 onChange={handleChange}
@@ -172,10 +172,10 @@ export default function Register() {
                 required
               />
 
-              <label htmlFor="email">Email</label>
+              <label htmlFor="Useremail">Email</label>
               <input
                 type="email"
-                id="email"
+                id="Useremail"
                 name="user_Email"
                 placeholder="  Enter your email"
                 value={formData.user_Email}
@@ -194,10 +194,10 @@ export default function Register() {
                 required
               />
 
-              <label htmlFor="location">Location</label>
+              <label htmlFor="Userlocation">Location</label>
               <input
                 type="text"
-                id="location"
+                id="Userlocation"
                 name="user_Location"
                 placeholder="  Enter your location"
                 value={formData.user_Location}
