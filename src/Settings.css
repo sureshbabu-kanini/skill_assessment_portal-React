@@ -24,7 +24,7 @@ left: 300px;
 top: 0px;
 
 filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.16));
-border: 1px solid black;
+
 }
 
 
@@ -37,7 +37,7 @@ width: 1620px;
 height: 329px;
 left: 300px;
 top: 114px;
-border: 1px solid black;
+
 }
 
 .background{
@@ -47,7 +47,7 @@ height: 229px;
 left: 300px;
 top: 114px;
 
-/* background: url(bg.png); */
+background: url(assets/Settings/bg.png);
 }
 
 .profilephoto{
@@ -69,7 +69,7 @@ height: 144px;
 left: 348px;
 top: 291px;
 
-/* background: url(profileimg.png); */
+background: url(assets/Settings/profileimg.png);
 }
 
 
@@ -98,8 +98,6 @@ align-items: center;
 color: #0C1116;
 }
 
-
-/*position*/
 .desiganation{
     position: absolute;
 width: 301px;
@@ -126,7 +124,7 @@ width: 656px;
 height: 404px;
 left: 342px;
 top: 494px;
-border: 1px solid black;border: 1px solid black;
+
 }
 
 .person2{
@@ -135,7 +133,7 @@ width: 656px;
 height: 429px;
 left: 1076px;
 top: 493px;
-border: 1px solid black;
+
 }
 
 #submitbtn{
@@ -172,8 +170,12 @@ letter-spacing: 0.02em;
 /* TEXT_COLOR/TEXT-500 */
 
 color: #717D8A;
-border: 1px solid black;
+
 }
+
+
+
+
 .my-button {
     position: absolute;
     width: 128px;
@@ -249,7 +251,7 @@ color: #0C1116;
     position: absolute;
     width: 70px;
     left: 340px;
-    top: 60.83%;
+    top: 68.83%;
     bottom: 47.41%;
     
     font-family: 'Manrope';
@@ -265,18 +267,12 @@ color: #0C1116;
 
 #firstName{
     box-sizing: border-box;
-
     position: absolute;
     width: 313px;
     left: 339px;
-    top: 63.06%;
-    bottom: 32.87%;
-    
-    /* LAYOUT_COLOR/LAYOUT-01 */
-    
+    top: 72.06%;
+    bottom: 22.87%;
     background: #FFFFFF;
-    /* TEXT_COLOR/TEXT-300 */
-    
     border: 1px solid #D6DADE;
     border-radius: 4px;
 }
@@ -285,7 +281,7 @@ color: #0C1116;
     position: absolute;
 width: 70px;
 left: 688px;
-top: 60.83%;
+top: 68.83%;
 bottom: 47.41%;
 
 font-family: 'Manrope';
@@ -301,22 +297,15 @@ color: #A8B0B9;
 
 
 #lastname{
-    
-box-sizing: border-box;
-
-position: absolute;
-width: 313px;
-left: 684px;
-top: 63.06%;
-bottom: 32.87%;
-
-/* LAYOUT_COLOR/LAYOUT-01 */
-
-background: #FFFFFF;
-/* TEXT_COLOR/TEXT-300 */
-
-border: 1px solid #D6DADE;
-border-radius: 4px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 313px;
+    left: 684px;
+    top: 72.06%;
+    bottom: 22.87%;
+    background: #FFFFFF;
+    border: 1px solid #D6DADE;
+    border-radius: 4px;
 }
 
 .savebtn{
@@ -337,7 +326,7 @@ border-radius: 4px;
     position: absolute;
     width: 70px;
     left: 340px;
-    top: 69.83%;
+    top: 78.83%;
     bottom: 47.41%;
     
     font-family: 'Manrope';
@@ -354,18 +343,12 @@ border-radius: 4px;
 
 #department{
     box-sizing: border-box;
-
     position: absolute;
     width: 656px;
     left: 342px;
-    top: 72.06%;
-    bottom: 23.87%;
-    
-    /* LAYOUT_COLOR/LAYOUT-01 */
-    
+    top: 83.06%;
+    bottom: 11.87%;
     background: #FFFFFF;
-    /* TEXT_COLOR/TEXT-300 */
-    
     border: 1px solid #D6DADE;
     border-radius: 4px;
 }
@@ -396,7 +379,7 @@ color: #242D35;
     position: absolute;
     width: 70px;
     left: 340px;
-    top: 78.83%;
+    top: 89.83%;
     bottom: 47.41%;
     
     font-family: 'Manrope';
@@ -413,7 +396,7 @@ color: #242D35;
     position: absolute;
     width: 70px;
     left: 688px;
-    top: 78.83%;
+    top: 89.83%;
     bottom: 47.41%;
     
     font-family: 'Manrope';
@@ -428,45 +411,37 @@ color: #242D35;
 }
 #date{
     box-sizing: border-box;
-
     position: absolute;
     width: 313px;
     left: 340px;
-    top: 81.37%;
-    bottom: 14.54%;
-    
-    /* LAYOUT_COLOR/LAYOUT-01 */
-    
+    top: 93.37%;
+    bottom: 1.54%;
     background: #FFFFFF;
-    /* TEXT_COLOR/TEXT-300 */
-    
     border: 1px solid #D6DADE;
-    border-radius: 4px;   
+    border-radius: 4px;
+   
 }
 
 #gender{
     box-sizing: border-box;
-
     position: absolute;
     width: 313px;
     left: 684px;
-    top: 81.37%;
-    bottom: 14.56%;
-    
-    /* LAYOUT_COLOR/LAYOUT-01 */
-    
+    top: 93.37%;
+    bottom: 1.54%;
     background: #FFFFFF;
-    /* TEXT_COLOR/TEXT-300 */
-    
     border: 1px solid #D6DADE;
-    border-radius: 4px;   
+    border-radius: 4px;
+
 }
+
+
 
 .education{
     position: absolute;
     width: 113px;
     left: 340px;
-    top: 88.83%;
+    top: 100.83%;
     bottom: 47.41%;
     
     font-family: 'Manrope';
@@ -488,8 +463,8 @@ box-sizing: border-box;
 position: absolute;
 width: 656px;
 left: 340px;
-top: 91.37%;
-bottom: 4.56%;
+top: 104%;
+bottom:-10%;
 
 /* LAYOUT_COLOR/LAYOUT-01 */
 
@@ -499,6 +474,12 @@ background: #FFFFFF;
 border: 1px solid #D6DADE;
 border-radius: 4px;
 }
+
+
+
+
+
+
 
 .contactdetails{
     position: absolute;
@@ -531,7 +512,7 @@ color: #0C1116;
     position: absolute;
     width: 56px;
     left: 1076px;
-    top: 60.83%;
+    top: 68.83%;
     bottom: 47.41%;
     
     font-family: 'Manrope';
@@ -551,7 +532,7 @@ color: #0C1116;
 position: absolute;
 width: 96px;
 left: 1076px;
-top: 69.83%;
+top: 79.83%;
 bottom: 47.8%;
 
 font-family: 'Manrope';
@@ -569,7 +550,7 @@ color: #A8B0B9;
     position: absolute;
 width: 58px;
 left: 1076px;
-top: 78.83%;
+top: 90.83%;
 bottom: 47.41%;
 
 font-family: 'Manrope';
@@ -587,7 +568,7 @@ color: #A8B0B9;
     position: absolute;
 width: 55px;
 left: 1076px;
-top: 88.83%;
+top: 101.83%;
 bottom: 47.41%;
 
 font-family: 'Manrope';
@@ -651,8 +632,14 @@ color: #A8B0B9;
 }
 
 .body{
-   background: #1E1E1E;
+   background: #1E1E1E;;
 }
+
+
+
+
+
+
 
 .sidebar {
     position: absolute;
