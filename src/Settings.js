@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Settings.css';
 
@@ -16,48 +16,56 @@ const Settings = () => {
     email: '',
     phoneNumber: '',
     location: '',
-    address: ''
+    address: '',
+    user_Image: '', // Add user_Image to the state
   });
 
-  const fetchUserData = async () => {
-    // Retrieve userEmail from local storage
-    const userEmail = localStorage.getItem('userEmail');
+  useEffect(() => {
+    const fetchUserData = async () => {
+      // Retrieve userEmail from local storage
+      const userEmail = localStorage.getItem('userEmail');
 
-    // Fetch user data based on userEmail
-    try {
-      const response = await axios.get(
-        `https://localhost:7198/api/Users/GetByEmail?userEmail=${userEmail}`
-      );
-      const user = response.data[0];
+      // Fetch user data based on userEmail
+      try {
+        const response = await axios.get(
+          `https://localhost:7198/api/Users/GetByEmail?userEmail=${userEmail}`
+        );
+        const user = response.data[0];
 
-      // Update the state with the fetched user data
-      setUserData({
-        id: user.user_ID,
-        firstName: user.user_FirstName,
-        lastName: user.user_LastName,
-        department: user.user_Departmenr,
-        designation: user.user_Designation,
-        dateOfBirth: user.user_DOB,
-        gender: user.user_Gender,
-        educationLevel: user.user_EduLevel,
-        email: user.user_Email,
-        phoneNumber: user.user_PhoneNo,
-        location: user.user_Location,
-        address: user.user_Address
-      });
-    } catch (error) {
-      console.error('Failed to fetch user data:', error);
-    }
-  };
+        // Convert the base64 string to an image URL
+        const userImageURL = `data:image/jpeg;base64,${user.user_Image}`;
+
+        // Update the state with the fetched user data and the image URL
+        setUserData({
+          id: user.user_ID,
+          firstName: user.user_FirstName,
+          lastName: user.user_LastName,
+          department: user.user_Departmenr,
+          designation: user.user_Designation,
+          dateOfBirth: user.user_DOB,
+          gender: user.user_Gender,
+          educationLevel: user.user_EduLevel,
+          email: user.user_Email,
+          phoneNumber: user.user_PhoneNo,
+          location: user.user_Location,
+          address: user.user_Address,
+          user_Image: userImageURL,
+        });
+      } catch (error) {
+        console.error('Failed to fetch user data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, []);
 
   const handleEditButtonClick = () => {
     setIsEditMode(true);
-    fetchUserData();
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     // Prepare the updated user data object
     const updatedUserData = {
       user_ID: userData.id,
@@ -71,21 +79,21 @@ const Settings = () => {
       user_Email: isEditMode ? userData.email : userData.user_Email,
       user_PhoneNo: isEditMode ? userData.phoneNumber : userData.user_PhoneNo,
       user_Location: isEditMode ? userData.location : userData.user_Location,
-      user_Address: isEditMode ? userData.address : userData.user_Address
+      user_Address: isEditMode ? userData.address : userData.user_Address,
     };
-  
+
     try {
       // Send a PUT request to update the user data
       await axios.put(`https://localhost:7198/api/Users/${userData.id}`, updatedUserData);
-  
+
       // Display a success message or perform any other necessary actions
       console.log('User data updated successfully!');
     } catch (error) {
       console.error('Failed to update user data:', error);
     }
-  
+
     setIsEditMode(false);
-  };  
+  };
 
   return (
     <div>
@@ -252,7 +260,9 @@ const Settings = () => {
 
       <div className="profilephoto"></div>
 
-      <div className="profileimg"></div>
+      <div className="profileimg">
+      {userData.user_Image && <img src={userData.user_Image} alt="User Profile" />}
+      </div>
     </div>
   );
 };

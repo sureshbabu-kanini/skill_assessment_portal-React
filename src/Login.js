@@ -4,10 +4,12 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mainlogo from './assets/SignInImages/mainlogo.svg';
 import kaninilogo from './assets/SignInImages/kanini logo.svg';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const closeModal = () => {
     const modal = document.getElementById("exampleModalCenter");
@@ -43,9 +45,10 @@ export default function Login() {
       .then(token => {
         // Print the generated token in the console
         console.log(token);
-
-        // Store the userEmail in local storage
+        navigate('/Dashboard');
+        // Store the userEmail in local storage only on successful login
         localStorage.setItem('userEmail', email);
+        navigate('/Dashboard');
       })
       .catch(error => {
         console.error('Error:', error);

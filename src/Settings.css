@@ -62,18 +62,24 @@ background: #FFFFFF;
 box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.08);
 }
 
-.profileimg{
+.profileimg {
     position: absolute;
-width: 144px;
-height: 144px;
-left: 348px;
-top: 291px;
-
-background: url(assets/Settings/profileimg.png);
-}
-
-
-
+    width: 144px;
+    height: 144px;
+    left: 348px;
+    top: 291px;
+    overflow: hidden; 
+    border-radius: 85px;
+  }
+  
+  .profileimg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    object-position: center top;
+  }
+  
+  
 /*userid and his name */
 .userid{
     position: absolute;

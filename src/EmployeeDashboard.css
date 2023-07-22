@@ -1127,7 +1127,7 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     text-align: center;
 }
 
-.AddQuestionsButtonVector {
+.AddQuestionsButtonVector_ {
     position: absolute;
     left: 79.09%;
     right: 14.89%;
@@ -1161,19 +1161,24 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     }
 }
 
-
 .ProfilePicture {
     position: absolute;
     width: 84px;
     height: 84px;
     left: 340px;
     top: 162px;
-    border-radius: 85px;
-    /* for Black Layout */
-    background: url(assets/EmployeeDashboardImages/ProfilePicture.svg);
-
-}
-
+    border-radius: 50%; 
+    overflow: hidden; 
+  }
+  
+  .ProfilePicture img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+    margin-top: -15%; 
+  }
+  
+  
 .ProfileName {
     position: absolute;
     width: 224px;
@@ -1380,4 +1385,259 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     top: 24px;
     background: url(assets/EmployeeDashboardImages/ReportingManagerPic.svg);
     border-radius: 100px;
+}
+
+.Sidebar{
+    position: absolute;
+width: 300px;
+height: 1080px;
+left: 0px;
+top: 0px;
+background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
+}
+.kaninilogo { 
+    width:93px;
+    height:47px;
+    position:absolute;
+    left:123px;
+    top:50px;
+}
+.kaninilogo1 { 
+    color:rgba(12.000000234693289, 17.00000088661909, 22.000000588595867, 1);
+    width:93px;
+    height:33px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    font-family:Roboto;
+    text-align:left;
+    font-size:28px;
+    letter-spacing:10;
+}
+.kaninilogo2 { 
+    color:rgba(55.17031118273735, 63.178905844688416, 71.18750050663948, 1);
+    width:93px;
+    height:19px;
+    position:absolute;
+    left:0px;
+    top:28px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:14px;
+    letter-spacing:9;
+}
+.kaninilogo3 { 
+    width:47px;
+    height:47px;
+    position:absolute;
+    left:50px;
+    top:50px;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-image: url(assets/Sidebar/kaninilogo.svg);
+}
+.dashboard { 
+    position:absolute;
+    left:83px;
+    top:155px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+}
+.dashboard1 { 
+    position:absolute;
+    left:45px;
+    top:154px;
+    right:237px;
+    bottom:905px;
+    background-image: url(assets/Sidebar/das.svg);
+}
+.Takeass { 
+    position:absolute;
+    left:83px;
+    top: 238px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+}
+.Takeass1 { 
+    position:absolute;
+    left:45px;
+    top:239px;
+    right:237px;
+    bottom:824.39px;
+    background-image: url(assets/Sidebar/takeass.svg);
+}
+.Allocateass { 
+    position:absolute;
+    left:83px;
+    top: 320px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+}
+.Allocateass1 { 
+    position:absolute;
+    left:45px;
+    top:321px;
+    right:240px;
+    bottom:741px;
+    background-image: url(assets/Sidebar/allocateass.svg);
+}
+.Result { 
+    position:absolute;
+    left:83px;
+    top: 404px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+}
+.Result1_ { 
+    position:absolute;
+    left:45px;
+    top:406px;
+    right:240px;
+    bottom: 656px;
+    background-image: url(assets/Sidebar/result.svg);
+}
+.teammem{
+    position:absolute;
+    left:83px;
+    top: 487px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+
+}
+.teammem1{
+    position:absolute;
+    left:45px;
+    top:491px;
+    right: 235px;
+    bottom: 574.95px;
+
+}
+.Settings{
+    position:absolute;
+    left:83px;
+    top: 467px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+
+}
+.Settings1_{
+    position:absolute;
+    left:45px;
+    top:467px;
+    right: 237px;
+    bottom: 491.38px;
+    background-image: url(assets/Sidebar/setting.svg);
+
+}
+.Logout{
+    position:absolute;
+    left:85px;
+    top: 991px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+
+}
+.Logout1{
+    position:absolute;
+    left:45px;
+    top:991px;
+    right: 242.55px;
+    bottom: 69px;
+    background-image: url(assets/Sidebar/logout.svg);
+
+}
+.Navbar{
+    position: absolute;
+width: 1620px;
+height: 114px;
+left: 300px;
+top: 0px;
+filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.16));
+background: linear-gradient(138.51deg, rgba(223, 243, 251, 0.3) 59.84%, rgba(225, 238, 200, 0.3) 116.14%);
+}
+.rr{
+position: absolute;
+left: 30px;
+top: 30px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 33px;
+color: #242D35;
+}
+.rr1{
+position: absolute;
+left: 30px;
+top: 65px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 18px;
+color: #A8B0B9;
+}
+#search{
+box-sizing: border-box;
+width: 386px; 
+height: 40px;
+position: absolute;
+border: 1px solid #A8B0B9;
+border-radius: 8px;
+left: 888px;
+top: 37px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 14px;
+letter-spacing: 0.2px;
+color: #A8B0B9;
+mix-blend-mode: normal;
+text-align: left;
+text-indent: 38px;
+
+}
+.bell{   
+position: absolute;
+right: 284px;
+cursor: pointer;
+}
+.subra{
+    
+position: absolute;
+left: 1368px;
+top: 33px;
+}
+.subra1{
+    position: absolute;
+left: 1430px;
+top: 44px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 25px;
+color: #242D35;
 }
