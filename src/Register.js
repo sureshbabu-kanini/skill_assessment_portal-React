@@ -238,7 +238,7 @@ export default function Register() {
               />
 
               <input
-                type="submit"
+                type="submitNew"
                 value="Register"
                 className="button1"
                 style={{ color: 'white', fontSize: '18px' }}

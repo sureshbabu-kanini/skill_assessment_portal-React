@@ -1,3 +1,4 @@
+/* eslint-disable */
 import './EmployeeDashboard.css';
 import React, { useEffect, useState } from 'react';
 import AssessmentsBulb from './assets/EmployeeDashboardImages/Bulb.png';
@@ -7,7 +8,7 @@ export default function EmployeeDashboard() {
   const [loading, setLoading] = useState(true);
   const [userImageURL, setUserImageURL] = useState('');
   const [swaggerData, setSwaggerData] = useState([]);
-  const [totalPoints, setTotalPoints] = useState('');
+  const [totalPoints, setTotalPoints] = useState('0');
 
   useEffect(() => {
     const userEmail = localStorage.getItem('userEmail');
@@ -16,7 +17,6 @@ export default function EmployeeDashboard() {
       try {
         const response = await fetch(`https://localhost:7198/api/Users/GetByEmail?userEmail=${encodeURIComponent(userEmail)}`);
         const data = await response.json();
-        console.log(data);
         setProfileData(data);
         if (data && data[0] && data[0].user_Image) {
           const binaryData = atob(data[0].user_Image);
@@ -70,24 +70,51 @@ export default function EmployeeDashboard() {
   const fetchTotalPoints = async () => {
     try {
       const userID = localStorage.getItem('userID');
-      if (!userID) return; // Make sure userID is available before making the API call
+      if (!userID) return;
 
-      const response = await fetch(`https://localhost:7198/api/Results/GetTotalPointsByUserId/${userID}`);
+      // Add random query parameter to avoid caching
+      const randomQueryParam = Math.random().toString(36).substring(7);
+      const response = await fetch(`https://localhost:7198/api/Results/GetTotalPointsByUserId/${userID}?rnd=${randomQueryParam}`);
       const data = await response.json();
-      if (data && data) {
+      if (data !== null && !isNaN(data)) {
         setTotalPoints(String(data));
+      } else {
+        setTotalPoints('0'); 
       }
     } catch (error) {
       console.error('Error fetching total points:', error);
+      setTotalPoints('0'); 
     }
   };
 
   useEffect(() => {
-    fetchTotalPoints();
+    const timer = setTimeout(() => {
+      fetchTotalPoints();
+    }, 1000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const fetchResultCount = async () => {
+    try {
+      const userEmail = localStorage.getItem('userEmail');
+      const response = await fetch(`https://localhost:7198/api/Users/GetUsersByEmailWithResultCount?userEmail=${encodeURIComponent(userEmail)}`);
+      const data = await response.json();
+      if (data && Array.isArray(data) && data.length > 0) {
+        const resultCount = data[0].resultCount;
+        document.querySelector('.NumberOfCompletedAssessed').textContent = `${resultCount}`;
+      }
+    } catch (error) {
+      console.error('Error fetching result count:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchResultCount();
   }, []);
 
   return (
-    <div>
+    <div className='MainDiv'>
       <div className='fullbody'>
         <div className="Overview"></div>
         <div className="OverviewTitle">Overview</div>
@@ -102,7 +129,7 @@ export default function EmployeeDashboard() {
         <div className="CompletedAssessedSVG">
         </div>
         <div className="CompletedAssessedText">Completed Assessed</div>
-        <div className="NumberOfCompletedAssessed">6</div>
+        <div className="NumberOfCompletedAssessed"></div>
 
         <div className="PointsEarned"></div>
         <div className="PointsEarnedSVG">
@@ -180,27 +207,27 @@ export default function EmployeeDashboard() {
               <>
                 <div className="ColleagueMembers1">
                   <div className="ColleagueMembers1ID">{`${swaggerData[0].user_ID} - ${swaggerData[0].user_FirstName} ${swaggerData[0].user_LastName}`}</div>
-                  <div className="ColleagueMembers1Points">Points: 1587</div>
+                  <div className="ColleagueMembers1Points">Points: {`${swaggerData[0].totalPoints}`}</div>
                   <div className="ColleagueMembers1RoleSkillLevel">{`${swaggerData[0].user_Designation} | ${swaggerData[0].user_Departmenr} | ${swaggerData[0].user_Location}`}</div>
                   <div className="ColleagueMembers1Divider"></div>
                 </div>
                 <div className="ColleagueMembers2">
                   <div className="ColleagueMembers2ID">{`${swaggerData[1].user_ID} - ${swaggerData[1].user_FirstName} ${swaggerData[1].user_LastName}`}</div>
-                  <div className="ColleagueMembers2Points">Points: 1587</div>
+                  <div className="ColleagueMembers1Points">Points: {`${swaggerData[1].totalPoints}`}</div>
                   <div className="ColleagueMembers1RoleSkillLevel">{`${swaggerData[1].user_Designation} | ${swaggerData[1].user_Departmenr} | ${swaggerData[1].user_Location}`}</div>
                 </div>
                 <div className="ColleagueMembers2Divider"></div>
 
                 <div className="ColleagueMembers3">
                   <div className="ColleagueMembers3ID">{`${swaggerData[2].user_ID} - ${swaggerData[2].user_FirstName} ${swaggerData[2].user_LastName}`}</div>
-                  <div className="ColleagueMembers3Points">Points: 1587</div>
+                  <div className="ColleagueMembers1Points">Points: {`${swaggerData[2].totalPoints}`} </div>
                   <div className="ColleagueMembers1RoleSkillLevel">{`${swaggerData[2].user_Designation} | ${swaggerData[2].user_Departmenr} | ${swaggerData[2].user_Location}`}</div>
                 </div>
                 <div className="ColleagueMembers3Divider"></div>
 
                 <div className="ColleagueMembers4">
                   <div className="ColleagueMembers4ID">{`${swaggerData[3].user_ID} - ${swaggerData[3].user_FirstName} ${swaggerData[3].user_LastName}`}</div>
-                  <div className="ColleagueMembers4Points">Points: 1587</div>
+                  <div className="ColleagueMembers1Points">Points: {`${swaggerData[3].totalPoints}`}</div>
                   <div className="ColleagueMembers1RoleSkillLevel">{`${swaggerData[3].user_Designation} | ${swaggerData[3].user_Departmenr} | ${swaggerData[3].user_Location}`}</div>
                 </div>
               </>

@@ -10,6 +10,7 @@ export default function TeamMembers() {
   const [userResults, setUserResults] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(0); // Track the selected index
   const [resultCount, setResultCount] = useState(0);
+  const [totalPoints, setTotalPoints] = useState('0');
 
   // Function to fetch user details based on user ID
   const fetchUserDetails = async () => {
@@ -50,6 +51,35 @@ export default function TeamMembers() {
       console.error(error);
     }
   };
+
+  const fetchTotalPoints = async () => {
+    try {
+      const userID = localStorage.getItem('userID');
+      if (!userID) return;
+
+      // Add random query parameter to avoid caching
+      const randomQueryParam = Math.random().toString(36).substring(7);
+      const response = await fetch(`https://localhost:7198/api/Results/GetTotalPointsByUserId/${userID}?rnd=${randomQueryParam}`);
+      const data = await response.json();
+      if (data !== null && !isNaN(data)) {
+        setTotalPoints(String(data));
+      } else {
+        setTotalPoints('0'); 
+      }
+    } catch (error) {
+      console.error('Error fetching total points:', error);
+      setTotalPoints('0'); 
+    }
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      fetchTotalPoints();
+    }, 1000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+  
 
   useEffect(() => {
     fetchUserDetails();
@@ -148,7 +178,7 @@ export default function TeamMembers() {
 
                 {/* Profile Description */}
                 <div id="description-profile">
-                  <span id="prf-name">{userDetails ? userDetails.user_ID : ''}-{userDetails ? userDetails.user_FirstName : ''}</span>
+                  <span id="prf-name">{userDetails ? userDetails.user_ID : ''}-{userDetails ? userDetails.user_FirstName : ''} {userDetails ? userDetails.user_LastName : ''}</span>
                   <span id="status">{userDetails ? userDetails.user_Departmenr : ''}</span>
                   <span id="skill">Skill Level: {userDetails ? userDetails.skilllevel : ''}</span>
                   <span></span>
@@ -166,7 +196,7 @@ export default function TeamMembers() {
                       Earned points
                     </span>
                     <span id="Epoint-value" className="info value" style={{ fontWeight: "bold" }}>
-                      1257
+                    {totalPoints}
                     </span>
                   </div>
                   <div id="vertical-line"></div>
@@ -194,7 +224,7 @@ export default function TeamMembers() {
                 {/* Personal Details */}
                 <div className="personal-details">
                   <div id="heading">
-                    <span className="info">{userDetails ? userDetails.user_PhoneNo : ''}</span>
+                    <span className="info">Contact Details</span>
                   </div>
                   <div className="personal-info">
                     <span className="material-symbols-outlined">location_on</span>
@@ -399,10 +429,10 @@ export default function TeamMembers() {
                   <span className="text-model">Designation</span>
                 </div>
                 <div id="employee-secondhalf" className="col-6">
-                  <span className="text-model-right">{userDetails ? userDetails.user_id : ''}</span>
-                  <span className="text-model-right">{userDetails ? userDetails.email : ''}</span>
-                  <span className="text-model-right">UXUI</span>
-                  <span className="text-model-right">{userDetails ? userDetails.department : ''}</span>
+                  <span className="text-model-right">{userDetails ? userDetails.user_ID : ''}</span>
+                  <span className="text-model-right">{userDetails ? userDetails.user_Email : ''}</span>
+                  <span className="text-model-right">{userDetails ? userDetails.user_Departmenr : ''}</span>
+                  <span className="text-model-right">{userDetails ? userDetails.user_Designation : ''}</span>
                 </div>
               </div>
               <div className="astmt-dails col-6">

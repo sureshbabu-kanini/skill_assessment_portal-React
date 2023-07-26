@@ -68,7 +68,7 @@
     
   }
   
-  input[type="submit"] {
+  input[type="submitNew"] {
     background: #7BCCED;
     color: white;
     padding: 14px 20px;
@@ -81,7 +81,7 @@
     justify-content: center;
   }
   
-  input[type="submit"]:hover {
+  input[type="submitNew"]:hover {
     background-color: grey;
   }
   
