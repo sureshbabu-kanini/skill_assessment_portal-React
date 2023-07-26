@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Register() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     user_FirstName: '',
     user_LastName: '',
     user_Departmenr: '',
@@ -18,8 +18,11 @@ export default function Register() {
     user_Location: '',
     user_Address: '',
     user_Email: '',
-    user_Password: ''
-  });
+    user_Password: '',
+    user_Image: null // Will be set to the image file selected by the user
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
     setFormData({
@@ -28,33 +31,31 @@ export default function Register() {
     });
   };
 
+  const handleImageChange = (e) => {
+    const imageFile = e.target.files[0];
+    setFormData({
+      ...formData,
+      user_Image: imageFile
+    });
+  };
+
   const createUser = async () => {
     try {
+      const formDataWithImage = new FormData();
+      for (const key in formData) {
+        formDataWithImage.append(key, formData[key]);
+      }
+
+      // Save the user data along with the image file to the API
       const response = await fetch('https://localhost:7198/api/Users', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+        body: formDataWithImage
       });
 
       if (response.ok) {
         console.log('User created successfully.');
         toast.success('User registered successfully');
-        setFormData({
-          user_FirstName: '',
-          user_LastName: '',
-          user_Departmenr: '',
-          user_Designation: '',
-          user_DOB: '',
-          user_Gender: '',
-          user_EduLevel: '',
-          user_PhoneNo: '',
-          user_Location: '',
-          user_Address: '',
-          user_Email: '',
-          user_Password: ''
-        });
+        setFormData(initialFormData);
       } else {
         const errorData = await response.json();
         const errorMessages = Object.values(errorData.errors).join(', ');
@@ -225,6 +226,15 @@ export default function Register() {
                 value={formData.user_Password}
                 onChange={handleChange}
                 required
+              />
+
+              <label htmlFor="userImage">Profile Image</label>
+              <input
+                type="file"
+                id="userImage"
+                name="user_Image"
+                accept="image/*"
+                onChange={handleImageChange}
               />
 
               <input

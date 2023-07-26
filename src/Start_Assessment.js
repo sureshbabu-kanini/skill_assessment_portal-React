@@ -19,30 +19,42 @@ export default function Start_Assessment() {
   const [selectedOption, setSelectedOption] = useState(null);
   const [selectedOptionMap, setSelectedOptionMap] = useState({});
   const [nextButtonClicked, setNextButtonClicked] = useState(false);
+  const [userDetails, setUserDetails] = useState(null);
+  const [startTimeString, setStartTimeString] = useState(null); // New state variable to store formatted start time
+// const [endTimeString, setEndTimeString] = useState(null); // New state variable to store formatted end time
+
 
   useEffect(() => {
+    const initialTime = 900; // 15 minutes in seconds
+    setTime(initialTime);
+  
     const timerInterval = setInterval(() => {
       setTime((prevTime) => {
-        if (prevTime >= 900) {
+        if (prevTime <= 0) {
           clearInterval(timerInterval);
-          return 900;
+          return 0;
         }
-        return prevTime + 1;
+        return prevTime - 1;
       });
     }, 1000);
-
+  
     return () => {
       clearInterval(timerInterval);
     };
   }, []);
+  
 
   useEffect(() => {
     fetchQuestions();
     fetchUserId();
+    fetchUserDetails();
   }, []);
 
   const fetchQuestions = async () => {
     try {
+      const startTime = new Date();
+      const startTimeString = startTime.toLocaleString('en-IN', { hour12: true });
+      setStartTimeString(startTimeString);
       const response = await axios.get('https://localhost:7198/api/Questions');
       setQuestions(response.data);
     } catch (error) {
@@ -52,7 +64,7 @@ export default function Start_Assessment() {
 
   const fetchUserId = async () => {
     try {
-      const response = await axios.get('https://localhost:7242/api/Users/ids');
+      const response = await axios.get('https://localhost:7198/api/Users/ids');
       const userIDs = response.data;
       localStorage.setItem('user_ids', JSON.stringify(userIDs));
       console.log('User IDs:', userIDs);
@@ -124,9 +136,16 @@ export default function Start_Assessment() {
     const timeLeft = getFormattedTime(time);
     console.log(timeLeft);
 
-    const userIdArray = JSON.parse(localStorage.getItem('user_ids'));
-    const userId = userIdArray[0]; // Assuming the user_id is stored as the first element in the array
+   
 
+    const endTime = new Date();
+    const endTimeString = endTime.toLocaleString('en-IN', { hour12: true });
+
+
+    // const userIdArray = JSON.parse(localStorage.getItem('userID'));
+    // const userId = userIdArray[0]; // Assuming the user_id is stored as the first element in the array
+    const userId=localStorage.getItem('userID')
+    
     // 
     // const answerIdss = JSON.parse(localStorage.getItem('ids')); // Retrieve the answer IDs from local storage
 
@@ -138,17 +157,51 @@ export default function Start_Assessment() {
       timeLeft: timeLeft,
       points:answeredQuestions*5,
       // answerIds: answerIdss, // Assign the answer IDs to the AnswerIds property
+     
+      starttime: startTimeString,
+      endtime:endTimeString,
+
+      assessment: {
+        assessment_ID: userId,
+      
+      },
+
       users: {
-        user_id: userId,
+        user_Id: userId,
       },
     };
 
-    const resultResponse = await axios.post('https://localhost:7242/api/Results', resultData);
+    const resultResponse = await axios.post('https://localhost:7198/api/Results', resultData);
     console.log('Result stored:', resultResponse.data);
   } catch (error) {
     console.log('Error submitting answer:', error);
   }
 };
+
+const fetchUserDetails = async () => {
+  try {
+    const userIdArray = JSON.parse(localStorage.getItem('user_ids'));
+    const userId = userIdArray[0]; // Assuming the user_id is stored as the first element in the array
+    const response = await axios.get(`https://localhost:7198/api/Assessments/assessment-ids/user/${userId}`);
+    const assessmentIds = response.data;
+    setUserDetails(assessmentIds); // Set the assessment IDs to state
+    localStorage.setItem('assessment_ids', JSON.stringify(assessmentIds));
+    console.log('Assessment IDs:', assessmentIds);
+  } catch (error) {
+    console.log('Error fetching assessment IDs:', error);
+  }
+};
+const handleSkipQuestion = () => {
+  // Check if there are more questions to skip
+  if (currentQuestionIndex < questions.length - 1) {
+    // Move to the next question
+    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    // Reset the selected option for the new question
+    setSelectedOption(null);
+    // Indicate that the next button is clicked (optional)
+    setNextButtonClicked(true);
+  }
+}
 
   
   
@@ -218,13 +271,13 @@ export default function Start_Assessment() {
         <span className="material-symbols-outlined" id="notification">
           notifications
         </span>
-        {/* <img
+        <img
           className="rounded-circle"
-          src={abraar}
+          // src={abraar}
           alt="Generic placeholder image"
           width="30"
           height="30"
-        /> */}
+        />
       </div>
       <div className="name">subaramaniyam</div>
       <div className="top-bar1"></div>
@@ -261,7 +314,7 @@ export default function Start_Assessment() {
       <button id="start-btn" onClick={submitAnswer}>
         Submit Assessment
       </button>
-      <button id="previous-btn">Skip</button>
+      <button id="previous-btn"onClick={handleSkipQuestion}>Skip</button>
       <div className="indicator"></div>
       <div className="answered"></div>
       <div className="Answered">Answered</div>
@@ -290,7 +343,7 @@ export default function Start_Assessment() {
       <div id="question">Questions {currentQuestionIndex + 1} of {questions.length}</div>
       <div className="level">Level :</div>
       <div className="basic">Basic</div>
-      <div className="content">ASS04_UXUI_001</div>
+      <div className="content"> {userDetails && userDetails.length > 0 && userDetails[0]}</div>
       <div className="time-left">Time left</div>
       <div id="question_no_one">{questions[currentQuestionIndex]?.qnInWords}</div>
     </>

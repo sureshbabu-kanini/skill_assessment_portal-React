@@ -18,14 +18,6 @@ export default function Allocated_Assessment_Detail() {
     assessmentPoints: '',
   });
 
-  const [assessmentData, setAssessmentData] = useState({
-    assessment_ID: 3,
-    assessment_SelectedTopic: 'SQL',
-    assessment_SelectedLevel: 'Upskill',
-    assessment_Points: 150,
-    assessment_TimeDuration: '00:30:00',
-  });
-
   const [assessmentData1, setAssessmentData1] = useState({
     assessment_Departmenr: "abc",
     assessment_DateOfCompletion: "",
@@ -40,9 +32,7 @@ export default function Allocated_Assessment_Detail() {
 
   useEffect(() => {
     const userEmail = localStorage.getItem('userEmail');
-    const apiUrl = `https://localhost:7198/api/Users/GetByEmail?userEmail=${encodeURIComponent(
-      userEmail
-    )}`;
+    const apiUrl = `https://localhost:7198/api/Users/GetByEmail?userEmail=${encodeURIComponent(userEmail)}`;
     axios
       .get(apiUrl)
       .then(response => {

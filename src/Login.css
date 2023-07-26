@@ -1,117 +1,130 @@
+/* Login.css */
+
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.login-container {
+  width: 100%;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+button:focus {
+  outline: none;
+}
+
+form i {
+  margin-left: -30px;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.blue-buttonNew {
+  background: #7bcced;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 90%;
+  height: 42px;
+  justify-content: center;
+}
+
+.blue-button:hover {
+  background-color: grey;
+}
+
+#message {
+  text-align: center;
+  color: red;
+}
+
+#image2 {
+  padding-bottom: 5%;
+}
+
+.container {
+  margin-top: 150px;
+  width: auto;
+}
+
+.button:hover {
+  background-color: black;
+}
+
+#bgimage {
+  width: fit-content;
+  margin-left: -15px;
+  height: 100vh;
+  object-fit: fill;
+  background-position: center;
+  background-size: cover;
+}
+
+#maincontainer {
+  background-color: rgb(255, 255, 255);
+  margin-top: 5em;
+}
+
+.col-lg-8 {
+  background-color: rgb(255, 255, 255);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  height: 15%;
+}
+
+button:focus {
+  outline: none;
+}
+
+form i {
+  margin-left: -30px;
+  cursor: pointer;
+}
+
+img[src$="mainlogo.svg"] {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Adjust the image size for smaller screens */
+  img[src$="mainlogo.svg"] {
+    max-width: 80%;
   }
-  
-  .login-container {
-    width: 100%;
-  }
-  
-  .form-container {
-    width: 90%;
-    margin-right: 20%;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    margin-top: 15px;
-  }
-  
-  button:focus {
-    outline: none;
-  }
-  
-  form i {
-    margin-left: -30px;
-    cursor: pointer;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 90%;
-    padding: 12px 20px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    height: 40px;
-  }
-  
-  input[type="button"] {
-    background: #7bcced;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 90%;
-    height: 42px;
-    justify-content: center;
-  }
-  
-  input[type="button"]:hover {
-    background-color: grey;
-  }
-  
-  #message {
-    text-align: center;
-    color: red;
-  }
-  
-  #image2 {
-    padding-bottom: 5%;
-  }
-  
-  .container {
-    margin-top: 150px;
-    width: auto;
-  }
-  
-  .button:hover {
-    background-color: black;
-  }
-  
-  #bgimage {
-    width: fit-content;
-    margin-left: -15px;
-    height: 100vh;
-    object-fit: fill;
-    background-position: center;
-    background-size: cover;
-  }
-  
-  #maincontainer {
-    background-color: rgb(255, 255, 255);
-    margin-top: 5em;
-  }
-  
-  .col-lg-8 {
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .button:focus {
-    outline: none;
-  }
-  
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 15%;
-    height: 15%;
-  }
-  
-  button:focus {
-    outline: none;
-  }
-  
-  form i {
-    margin-left: -30px;
-    cursor: pointer;
-  }
-  
+}

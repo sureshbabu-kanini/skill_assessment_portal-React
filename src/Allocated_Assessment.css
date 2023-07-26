@@ -1,0 +1,478 @@
+.sidebar{
+    position: absolute;
+    width: 213.44px;
+    height: 768.38px;
+    left: 0px;
+    top: 0px;
+    border: 1px solid black ;
+}
+
+.topbar{
+   position: absolute;
+   width: 1152.56px;
+   height: 81.11px;
+   left: 213.44px;
+   top: 0px;
+   filter: drop-shadow(0px 0px 4.26875px rgba(0, 0, 0, 0.16));
+   border: 1px solid black ;
+}
+
+.Assignedtext{
+    position: absolute;
+width: 120px;
+height: 17px;
+left: 234.78px;
+top: 105.16px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 12.8062px;
+line-height: 17px;
+color: #0C1116;
+}
+
+.assessmenttxt{
+position: absolute;
+width: 120px;
+height: 17px;
+left: 234.78px;
+top: 144.16px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 12.8062px;
+line-height: 17px;
+color: #0C1116;
+}
+
+.assessmentid{
+ position: absolute;
+width: 75.41px;
+height: 14px;
+left: 234.78px;
+top: 183.15px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 9.96042px;
+line-height: 14px;
+color: #717D8A;
+}
+
+.assessmentidbox{
+box-sizing: border-box;
+position: absolute;
+width: 157.21px;
+height: 28.46px;
+left: 337.97px;
+top: 179.2px;
+border-radius: 2.84583px;
+}
+
+#tb6{
+    width: 149.52px;
+    height: 21.46px;
+    left:338.65px;
+    background: #FAFAFA;
+     border: 0.711458px solid #D6DADE;
+     border-radius: 2.84583px;
+}
+
+.requesteddate{
+position: absolute;
+width: 75px;
+height: 14px;
+left: 576.99px;
+top: 186.44px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 9.96042px;
+line-height: 14px;
+color: #717D8A;
+}
+
+.requestedbox{
+box-sizing: border-box;
+position: absolute;
+width: 157.17px;
+height: 28.46px;
+left: 680.87px;
+top: 179.29px;
+border-radius: 2.84583px;
+}
+
+#tb7{
+    width: 149.52px;
+    height: 21.46px;
+    left:338.65px;
+    background: #FAFAFA;
+     border: 0.711458px solid #D6DADE;
+     border-radius: 2.84583px;
+}
+
+.topics{
+    position: absolute;
+width: 31px;
+height: 14px;
+left: 919.2px;
+top: 179.44px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 9.96042px;
+line-height: 14px;
+color: #717D8A;
+}
+
+.topicsbox{
+box-sizing: border-box;
+position: absolute;
+width: 156.52px;
+height: 71.15px;
+left: 1023.08px;
+top: 179.29px;
+border-radius: 2.84583px;
+}
+
+#tb8{
+    width: 149.52px;
+    height: 65.46px;
+    left:338.65px;
+    background: #FAFAFA;
+     border: 0.711458px solid #D6DADE;
+     border-radius: 2.84583px;
+}
+.timealloted{
+    position: absolute;
+width: 66.17px;
+height: 14px;
+left: 233.78px;
+top: 234px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 9.96042px;
+line-height: 14px;
+color: #717D8A;
+
+}
+.timeallotedbox{
+    box-sizing: border-box;
+position: absolute;
+width: 156.52px;
+height: 28.46px;
+left: 338.65px;
+top: 234px;
+border-radius: 2.84583px;
+}
+
+
+#tb9{
+    width: 149.52px;
+    height: 21.46px;
+    left:338.65px;
+    background: #FAFAFA;
+     border: 0.711458px solid #D6DADE;
+     border-radius: 2.84583px;
+}
+
+.assessmentdate{
+    position: absolute;
+width: 82px;
+height: 14px;
+left: 576.99px;
+top: 234.53px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 9.96042px;
+line-height: 14px;
+color: #717D8A;
+}
+
+.assessmentdatebox{
+box-sizing: border-box;
+position: absolute;
+width: 157.17px;
+height: 28.46px;
+left: 680.15px;
+top: 234.39px;
+}
+
+#tb10{
+    width: 149.52px;
+    height: 21.46px;
+    left:338.65px;
+    background: #FAFAFA;
+     border: 0.711458px solid #D6DADE;
+     border-radius: 2.84583px;
+}
+
+
+.assessmentpoints{
+    position: absolute;
+width: 90px;
+height: 14px;
+left: 234.78px;
+top: 286.62px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 9.96042px;
+line-height: 14px;
+color: #717D8A;
+
+}
+.assessmentpointbox{
+    box-sizing: border-box;
+position: absolute;
+width: 157.17px;
+height: 28.46px;
+left: 337.94px;
+top: 286.48px;
+border-radius: 2.84583px;
+}
+.assessmentlastbox{
+    box-sizing: border-box;
+    position: absolute;
+    width: 157.17px;
+    height: 28.46px;
+    left: 680.94px;
+   
+    top: 286.48px;
+    border-radius: 2.84583px;
+
+}
+
+#tb11{
+    width: 149.52px;
+    height: 21.46px;
+    left:338.65px;
+    background: #FAFAFA;
+     border: 0.711458px solid #D6DADE;
+     border-radius: 2.84583px;
+
+}
+#tb12{
+    width: 149.52px;
+    height: 21.46px;
+    left:338.65px;
+    background: #FAFAFA;
+     border: 0.711458px solid #D6DADE;
+     border-radius: 2.84583px;
+}
+
+.assessment{
+position: absolute;
+width: 76px;
+height: 17px;
+left: 234.78px;
+top: 347.51px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 12.8062px;
+line-height: 17px;
+color: #0C1116;
+}
+
+
+
+.before{
+    position: absolute;
+width: 98px;
+height: 17px;
+left: 576.99px;
+top: 347.51px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 12.8062px;
+line-height: 17px;
+color: #0C1116;
+}
+
+.assess1{
+    position: absolute;
+width: 130px;
+height: 14px;
+left: 260.82px;
+top: 382.64px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 9.96042px;
+line-height: 14px;
+color: #666666;
+}
+
+.assess2{
+position: absolute;
+width: 117px;
+height: 14px;
+left: 260.82px;
+top: 417.1px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 9.96042px;
+line-height: 14px;
+color: #666666;
+}
+
+
+.assess3{
+    
+    position: absolute;
+    width: 151px;
+    height: 14px;
+    left: 260.82px;
+    top: 454.55px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9.96042px;
+    line-height: 14px;
+    color: #666666;
+    }
+
+.assessmentlast{
+    position: absolute;
+    width: 82px;
+    height: 14px;
+    left: 576.99px;
+    top: 290.53px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9.96042px;
+    line-height: 14px;
+    color: #717D8A;
+}
+
+
+
+.bfs1{
+position: absolute;
+width: 602.61px;
+height: 15.25px;
+left: 576.99px;
+top: 382.64px;
+color: #666666;
+}
+
+.bfs2{
+position: absolute;
+width: 602.61px;
+height: 15.25px;
+left: 576.99px;
+top: 417.23px;
+color: #666666;
+}
+
+.bfs3{
+position: absolute;
+width: 602.61px;
+height: 15.25px;
+left: 576.99px;
+top: 454.82px;
+color: #666666;
+}
+.back{
+    position: absolute;
+    width: 26px;
+    height: 1400px;
+    left: 1150px;
+    top: -147px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.3833px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #717D8A;
+}
+
+.btn
+{
+position: absolute;
+width: 101.03px;
+height: 31.3px;
+left: 1218.73px;
+top: -145.64px;
+background: #7BCCED;
+border-radius: 2.84583px;
+}
+.confirm{
+    position: absolute;
+    width: 26px;
+    height: 1400px;
+    left: 1240px;
+    top: -145px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.3833px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #717D8A;
+}
+
+.icon1{
+     position: absolute;
+left: 17.19%;
+right: 81.88%;
+top: 382px;
+bottom: 35.09%;
+background: linear-gradient(156.2deg, #BAD881 151.07%);
+}
+
+.icon2{
+position: absolute;
+width: 12.81px;
+height: 12.81px;
+left: 231.78px;
+top: 417.1px;
+}
+
+.icon3{
+position: absolute;
+left: 17.19%;
+right: 82.02%;
+top: 454px;
+bottom: 27.59%;
+background: linear-gradient(156.2deg, #BAD881 151.07%);
+}
+
+.icon4{
+ position: absolute;
+width: 3.57px;
+height: 3.56px;
+left: 560px;
+top: 378.49px;
+background: linear-gradient(156.2deg, #BAD881 151.07%);
+}
+
+.icon5{
+ position: absolute;
+width: 3.57px;
+height: 3.56px;
+left: 560px;
+top: 417.08px;
+background: linear-gradient(156.2deg, #BAD881 151.07%);
+}
+.icon6{
+  position: absolute;
+width: 3.57px;
+height: 3.56px;
+left: 558px;
+top: 454.68px;
+background: linear-gradient(156.2deg,  #BAD881 151.07%);
+}

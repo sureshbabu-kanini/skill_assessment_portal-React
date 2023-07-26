@@ -6,6 +6,8 @@ export default function EmployeeDashboard() {
   const [profileData, setProfileData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [userImageURL, setUserImageURL] = useState('');
+  const [swaggerData, setSwaggerData] = useState([]);
+  const [totalPoints, setTotalPoints] = useState('');
 
   useEffect(() => {
     const userEmail = localStorage.getItem('userEmail');
@@ -17,7 +19,6 @@ export default function EmployeeDashboard() {
         console.log(data);
         setProfileData(data);
         if (data && data[0] && data[0].user_Image) {
-          // Convert the Base64 string to a Blob and create a URL for the image
           const binaryData = atob(data[0].user_Image);
           const blob = new Blob([new Uint8Array([...binaryData].map((char) => char.charCodeAt(0)))]);
           const imageURL = URL.createObjectURL(blob);
@@ -43,6 +44,18 @@ export default function EmployeeDashboard() {
     };
 
     fetchData1();
+
+    const fetchSwaggerData = async () => {
+      try {
+        const response = await fetch(`https://localhost:7198/api/Users/GetUnmatchedUserByEmail?userEmail=${encodeURIComponent(userEmail)}`);
+        const data = await response.json();
+        setSwaggerData(data);
+      } catch (error) {
+        console.error('Error fetching Swagger data:', error);
+      }
+    };
+
+    fetchSwaggerData();
   }, []);
 
   useEffect(() => {
@@ -54,6 +67,24 @@ export default function EmployeeDashboard() {
     setLoading(false);
   }, [profileData]);
 
+  const fetchTotalPoints = async () => {
+    try {
+      const userID = localStorage.getItem('userID');
+      if (!userID) return; // Make sure userID is available before making the API call
+
+      const response = await fetch(`https://localhost:7198/api/Results/GetTotalPointsByUserId/${userID}`);
+      const data = await response.json();
+      if (data && data) {
+        setTotalPoints(String(data));
+      }
+    } catch (error) {
+      console.error('Error fetching total points:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchTotalPoints();
+  }, []);
 
   return (
     <div>
@@ -77,7 +108,7 @@ export default function EmployeeDashboard() {
         <div className="PointsEarnedSVG">
         </div>
         <div className="PointsEarnedText">Points Earned</div>
-        <div className="NumberOfPointsEarned">150</div>
+        <div className="NumberOfPointsEarned">{totalPoints}</div>
 
         <div className="BadgesEarnedTitle">Badge Earned</div>
         <div className="BadgesEarned"></div>
@@ -119,47 +150,61 @@ export default function EmployeeDashboard() {
 
         <div className="ReportingManagerTitle">Reporting Manager</div>
         <div className="ReportingManagerProfile">
-          <div className="ReportingManagerProfilePicture">
-            <img src="assets/EmployeeDashboardImages/ReportingManagerPic.svg" alt="" />
-          </div>
-          <div className="ReportingManagerName">Sachin Borkar</div>
-          <div className="ReportingManagerRole">2080 | Manager</div>
+          {swaggerData.length >= 6 && (
+            <>
+              <div className="ReportingManagerProfilePicture">
+                <img src="assets/EmployeeDashboardImages/ReportingManagerPic.svg" alt="" />
+              </div>
+              <div className="ReportingManagerName">{`${swaggerData[5].user_FirstName} ${swaggerData[5].user_LastName}`}</div>
+              <div className="ReportingManagerRole">{`${swaggerData[5].user_ID} - ${swaggerData[5].user_Designation}`}</div>
+            </>
+          )}
         </div>
 
         <div className="YourHRspocTitle">Your HR-spoc</div>
         <div className="YourHRspocProfile">
-          <div className="YourHRspocProfilePicture"></div>
-          <div className="YourHRspocName">Sriram</div>
-          <div className="YourHRspocRole">2080 | Manager</div>
+          {swaggerData.length >= 6 && (
+            <>
+              <div className="YourHRspocProfilePicture"></div>
+              <div className="YourHRspocName">{`${swaggerData[4].user_FirstName} ${swaggerData[4].user_LastName}`}</div>
+              <div className="YourHRspocRole">{`${swaggerData[4].user_ID} - ${swaggerData[4].user_Designation}`}</div>
+            </>
+          )}
         </div>
 
         <div className="Colleague">
           <div className="ColleagueTitle">Colleague</div>
           <div className="ViewAllColleague">View All</div>
           <div className="ColleagueMembers">
-            <div className="ColleagueMembers1">
-              <div className="ColleagueMembers1ID">2036 - Somogyi Adrian</div>
-              <div className="ColleagueMembers1Points">Points: 1587</div>
-              <div className="ColleagueMembers1RoleSkillLevel">
-                Senior Associate | Basic Chennai
-              </div>
-              <div className="ColleagueMembers1Divider"></div>
-            </div>
-            <div className="ColleagueMembers2">
-              <div className="ColleagueMembers2ID">2036 - Somogyi Adrian</div>
-              <div className="ColleagueMembers2Points">Points: 1587</div>
-              <div className="ColleagueMembers1RoleSkillLevel">Senior Associate Pune</div>
-            </div>
-            <div className="ColleagueMembers3">
-              <div className="ColleagueMembers3ID">2036 - Somogyi Adrian</div>
-              <div className="ColleagueMembers3Points">Points: 1587</div>
-              <div className="ColleagueMembers1RoleSkillLevel">Senior Associate</div>
-            </div>
-            <div className="ColleagueMembers4">
-              <div className="ColleagueMembers4ID">2036 - Somogyi Adrian</div>
-              <div className="ColleagueMembers4Points">Points: 1587</div>
-              <div className="ColleagueMembers1RoleSkillLevel">Senior Associate</div>
-            </div>
+            {swaggerData.length >= 4 && (
+              <>
+                <div className="ColleagueMembers1">
+                  <div className="ColleagueMembers1ID">{`${swaggerData[0].user_ID} - ${swaggerData[0].user_FirstName} ${swaggerData[0].user_LastName}`}</div>
+                  <div className="ColleagueMembers1Points">Points: 1587</div>
+                  <div className="ColleagueMembers1RoleSkillLevel">{`${swaggerData[0].user_Designation} | ${swaggerData[0].user_Departmenr} | ${swaggerData[0].user_Location}`}</div>
+                  <div className="ColleagueMembers1Divider"></div>
+                </div>
+                <div className="ColleagueMembers2">
+                  <div className="ColleagueMembers2ID">{`${swaggerData[1].user_ID} - ${swaggerData[1].user_FirstName} ${swaggerData[1].user_LastName}`}</div>
+                  <div className="ColleagueMembers2Points">Points: 1587</div>
+                  <div className="ColleagueMembers1RoleSkillLevel">{`${swaggerData[1].user_Designation} | ${swaggerData[1].user_Departmenr} | ${swaggerData[1].user_Location}`}</div>
+                </div>
+                <div className="ColleagueMembers2Divider"></div>
+
+                <div className="ColleagueMembers3">
+                  <div className="ColleagueMembers3ID">{`${swaggerData[2].user_ID} - ${swaggerData[2].user_FirstName} ${swaggerData[2].user_LastName}`}</div>
+                  <div className="ColleagueMembers3Points">Points: 1587</div>
+                  <div className="ColleagueMembers1RoleSkillLevel">{`${swaggerData[2].user_Designation} | ${swaggerData[2].user_Departmenr} | ${swaggerData[2].user_Location}`}</div>
+                </div>
+                <div className="ColleagueMembers3Divider"></div>
+
+                <div className="ColleagueMembers4">
+                  <div className="ColleagueMembers4ID">{`${swaggerData[3].user_ID} - ${swaggerData[3].user_FirstName} ${swaggerData[3].user_LastName}`}</div>
+                  <div className="ColleagueMembers4Points">Points: 1587</div>
+                  <div className="ColleagueMembers1RoleSkillLevel">{`${swaggerData[3].user_Designation} | ${swaggerData[3].user_Departmenr} | ${swaggerData[3].user_Location}`}</div>
+                </div>
+              </>
+            )}
           </div>
         </div>
 
@@ -168,26 +213,24 @@ export default function EmployeeDashboard() {
           <div className="kaninilogo3">
           </div>
           {/* <div className="Sidebar"> */}
-            <button className="dashboard">Dashboard</button>
-            <div className="dashboard1">
-            </div>
-            <button className="Takeass">Take Assessment</button>
-            <div className="Takeass1">
-            </div>
-            <button className="Allocateass">Allocated Assessment</button>
-            <div className="Allocateass1">
-            </div>
-            <button className="Result">Result</button>
-            <div className="Result1_">
-            </div>
-            <button className="Settings">Settings</button>
-            <div className="Settings1_">
-            </div>
-            <button className="Logout">Logout</button>
-            <div className="Logout1">
-            </div>
-          {/* </div> */}
-
+          <button className="dashboard">Dashboard</button>
+          <div className="dashboard1">
+          </div>
+          <button className="Takeass">Take Assessment</button>
+          <div className="Takeass1">
+          </div>
+          <button className="Allocateass">Allocated Assessment</button>
+          <div className="Allocateass1">
+          </div>
+          <button className="Result">Result</button>
+          <div className="Result1_">
+          </div>
+          <button className="Settings">Settings</button>
+          <div className="Settings1_">
+          </div>
+          <button className="Logout">Logout</button>
+          <div className="Logout1">
+          </div>
         </div>
       </div>
       <div className="Topbar"></div>
@@ -206,12 +249,12 @@ export default function EmployeeDashboard() {
 
       <div className="EmployeeProfile">
         <div className="ProfilePicture">
-        {userImageURL && (
-        <img
-          src={userImageURL}
-          alt="User Profile"
-        />
-      )}
+          {userImageURL && (
+            <img
+              src={userImageURL}
+              alt="User Profile"
+            />
+          )}
         </div>
         <div className="ProfileName">
           {profileData && profileData[0].user_FirstName}  {profileData && profileData[0].user_LastName}

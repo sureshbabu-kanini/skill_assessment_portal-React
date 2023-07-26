@@ -4,36 +4,28 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mainlogo from './assets/SignInImages/mainlogo.svg';
 import kaninilogo from './assets/SignInImages/kanini logo.svg';
-import { Navigate, useNavigate } from 'react-router-dom';
+import eyelogo from './assets/SignInImages/eye.svg';
+import { useNavigate } from 'react-router-dom'; 
 
 export default function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
   const closeModal = () => {
-    const modal = document.getElementById("exampleModalCenter");
-    modal.style.display = "none";
-    const backdrop = document.querySelector(".modal-backdrop");
-    backdrop.remove();
   };
 
   const togglePassword = () => {
-    const passwordField = document.getElementById("password");
-    const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
-    passwordField.setAttribute("type", type);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Create a JSON payload with the email and password
     const payload = {
       User_Email: email,
       User_Password: password
     };
 
-    // Send a POST request to the API endpoint
     fetch('https://localhost:7198/api/Token', {
       method: 'POST',
       headers: {
@@ -43,10 +35,7 @@ export default function Login() {
     })
       .then(response => response.text())
       .then(token => {
-        // Print the generated token in the console
         console.log(token);
-        navigate('/Dashboard');
-        // Store the userEmail in local storage only on successful login
         localStorage.setItem('userEmail', email);
         navigate('/Dashboard');
       })
@@ -66,16 +55,16 @@ export default function Login() {
             <div id="image2">
               <img src={kaninilogo} alt="kaninilogo" />
             </div>
-            <h1 style={{ textAlign: 'center' }}>Sign In</h1>
-            <p style={{ paddingBottom: '2%' }}>Welcome back! Please enter your email and password</p>
+            <h1 style={{ textAlign: 'center',marginRight: '65%' }}>Sign In</h1>
+            <p style={{ paddingBottom: '2%', display: 'inline-block' }}>Welcome back! Please enter your email and password</p>
 
             <form onSubmit={handleSubmit}>
               <label htmlFor="username">Email ID</label>
               <input type="text" id="username" name="username" placeholder="name@kanini.com" value={email} onChange={(e) => setEmail(e.target.value)} />
               <label htmlFor="password">Password</label>
-              <input type="password" id="password" name="password" placeholder="**********" value={password} onChange={(e) => setPassword(e.target.value)} />
+              <input type="password" id="password" name="password" placeholder="*******" value={password} onChange={(e) => setPassword(e.target.value)} />
               <i>
-                <img src="assets/SignInImages/eye.svg" id="togglePassword" onClick={togglePassword} alt="Toggle Password" />
+                <img src={eyelogo} id="togglePassword" onClick={togglePassword} alt="Toggle Password" />
               </i>
               <br />
 
@@ -100,7 +89,7 @@ export default function Login() {
                             <p style={{ textAlign: 'center' }}>No worries, we'll send you reset instructions</p>
                             <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                             <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                            <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '30px', outline: 'none', boxShadow: 'none' }}>Sign In</button>
+                            <button type="submit" className="submit" style={{ width: '50%', marginTop: '30px', outline: 'none', boxShadow: 'none' }}>Sign In</button>
                           </div>
                         </div>
                       </form>
@@ -108,10 +97,10 @@ export default function Login() {
                   </div>
                 </div>
               </div>
-              <input type="submit" value="SIGN IN" className="button1" style={{ color: 'white' }} />
-            </form>
-          </div>
-        </div>
+              <input type="submit" value="SIGN IN" className="button1 blue-buttonNew" style={{ color: 'white' }} />
+      </form>
+    </div>
+  </div>
       </div>
     </div>
   );

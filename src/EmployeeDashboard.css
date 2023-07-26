@@ -1,13 +1,3 @@
-/* body {
-    position: relative;
-    width: 1536px;
-    height: 864px;
-    background: #FFFFFF;
-    font-family: 'Manrope';
-    overflow-x: hidden;
-} */
-
-/* Manrope font */
 body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarnedText, .BadgesEarnedTitle, 
 .SkillLevel, .QuickAccess, .Assessments, .AssessmentResultQuickAccess, .ReportingManagerTitle, .YourHRspocTitle,
 .ColleagueTitle, .ViewAllColleague, .WelcomeTitle, .WelcomeDetails, .AddQuestionsText, .ProfileName, .EmployeeID,
@@ -46,7 +36,6 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     letter-spacing: -0.01em;
 
     color: #000000;
-
 }
 
 /* Overview Display */
@@ -681,7 +670,7 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     position: absolute;
     width: 89px;
     height: 16px;
-    left: 56px;
+    left: 70px;
     top: 214px;
 
     font-family: 'Manrope';
@@ -769,30 +758,24 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
 
 .YourHRspocName {
     position: absolute;
-    width: 57px;
+    width: auto; /* Change width to "auto" to fit the content in a single line */
     height: 25px;
-    left: 72px;
+    left: 45px;
     top: 184px;
-
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
-    /* identical to box height */
-
-
-    /* TEXT_COLOR/TEXT-900 */
-
     color: #0C1116;
     font-family: Manrope;
     font-size: 18px;
     font-weight: 600;
     line-height: 25px;
     letter-spacing: 0em;
-    text-align: left;
-
-}
+    text-align: center;
+  }
+  
 
 .YourHRspocRole {
     position: absolute;
@@ -979,11 +962,6 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
-    /* identical to box height */
-
-
-    /* TEXT_COLOR/TEXT-500 */
-
     color: #717D8A;
     white-space: nowrap;
 }
@@ -1000,12 +978,16 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
-    /* identical to box height, or 21px */
+     color: #0C1116;
+}
 
-
-    /* TEXT_COLOR/TEXT-900 */
-
-    color: #0C1116;
+.ColleagueMembers2Divider {
+    position: absolute;
+    width: 383px;
+    height: 0px;
+    left: 29px;
+    top: 330px;
+    border: 1px solid #D6DADE;
 }
 
 .ColleagueMembers3 {
@@ -1014,8 +996,47 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     height: 70px;
     left: 30px;
     top: 359px;
-
     background: url(assets/EmployeeDashboardImages/ColleagueMembers3.svg);
+}
+
+.ColleagueMembers3ID {
+    position: absolute;
+    width: 169px;
+    height: 22px;
+    left: 85px;
+    top: 6px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #717D8A;
+    white-space: nowrap;
+}
+
+.ColleagueMembers3Points {
+    position: absolute;
+    width: 79px;
+    height: 21px;
+    left: 290px;
+    top: 7px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+     color: #0C1116;
+}
+
+.ColleagueMembers3Divider {
+    position: absolute;
+    width: 383px;
+    height: 0px;
+    left: 29px;
+    top: 460px;
+    border: 1px solid #D6DADE;
 }
 
 .ColleagueMembers4 {
@@ -1024,8 +1045,36 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     height: 70px;
     left: 30px;
     top: 489px;
-
     background: url(assets/EmployeeDashboardImages/ColleagueMembers4.svg);
+}
+
+.ColleagueMembers4ID {
+    position: absolute;
+    width: 169px;
+    height: 22px;
+    left: 85px;
+    top: 6px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #717D8A;
+    white-space: nowrap;
+}
+
+.ColleagueMembers4Points {
+    position: absolute;
+    width: 79px;
+    height: 21px;
+    left: 290px;
+    top: 7px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+     color: #0C1116;
 }
 
 .Sidebar {
@@ -1109,6 +1158,7 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
 
 /* default styles */
 
+/* Assuming this is your existing CSS code */
 .AddQuestionsButton {
     box-sizing: border-box;
     position: absolute;
@@ -1126,6 +1176,15 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     letter-spacing: 0em;
     text-align: center;
 }
+
+/* New CSS code for the hover effect */
+.AddQuestionsButton:hover {
+    background: #6AAFD8; /* Change the background color on hover */
+    color: white; /* Change the text color on hover */
+    cursor: pointer; /* Change the cursor to a pointer on hover (optional) */
+    /* Add any other styles you want to apply when hovering over the button */
+}
+
 
 .AddQuestionsButtonVector_ {
     position: absolute;
@@ -1246,7 +1305,7 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
     position: absolute;
     width: 97px;
     height: 19px;
-    left: 579px;
+    left: 500px;
     top: 224px;
 
     font-family: 'Manrope';

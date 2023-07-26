@@ -1,0 +1,288 @@
+.sidebarAlloted{
+    position: absolute;
+    width: 213.44px;
+    height: 768.38px;
+    left: 0px;
+    top: 0px;
+    border: 0.711458px solid #D6DADE;
+    
+}
+
+.topbarAlloted{
+    position: absolute;
+    width: 1152.56px;
+    height: 81.11px;
+    left: 213.44px;
+    top: 0px;
+    filter: drop-shadow(0px 0px 4.26875px rgba(0, 0, 0, 0.16));
+    border: 0.711458px solid #D6DADE;
+}
+
+.searchhereAlloted{  
+position: absolute;
+width: 274.62px;
+height: 28.46px;
+left: 845.21px;
+top: 26.32px;
+}
+
+.searchtopicAlloted{
+    position: absolute;
+    width: 355.67px;
+    height: 39.84px;
+    right:522px;
+    top: 90.26px;
+    border: 0.711458px solid #D6DADE;
+
+}
+
+#searchlogoAlloted{
+    position: absolute;
+    right:535px;
+    top: 105px;
+}
+
+.courselistAlloted{
+    box-sizing: border-box;
+    position: absolute;
+    width: 357.67px;
+    height: 433.28px;
+    left: 234.78px;
+    top: 182.13px;
+    overflow-y: scroll;
+    background: #FFFFFF;
+    border: 0.711458px solid #D6DADE;
+    border-radius: 5.69167px;
+}
+
+.assessmentdeetAlloted{
+box-sizing: border-box;
+position: absolute;
+width: 722.13px;
+height: 500.16px;
+left: 620px;
+top: 109.19px;
+background: #FFFFFF;
+opacity: 0.8;
+border: 0.711458px solid #D6DADE;
+border-radius: 5.69167px;   
+}
+
+.nextbtnAlloted{
+position: absolute;
+width: 101.03px;
+height: 31.3px;
+left: 1218.73px;
+top: 666.64px;
+background: #7BCCED;
+border-radius: 2.84583px;
+}
+
+#departmentAlloted{
+    color: #D6DADE;
+    box-sizing: border-box;
+    position: absolute;
+    width: 573.86px;
+    height:48.84px;
+    left: 20.08px;
+    top:40.25px;
+    border: 0.711458px solid #D6DADE;
+    border-radius: 4.26875px;
+}
+
+#dropdowndeptAlloted{
+    position: absolute;
+    top:184px;
+    right:155px;
+}
+
+#descriptionAlloted{ 
+color: #D6DADE;
+box-sizing: border-box;
+position: absolute;
+width: 574px;
+height: 166px;
+left: 17.08px;
+top: 102px;
+background: #FFFFFF;
+border: 1px solid #D6DADE;
+border-radius: 6px;
+}
+
+.selectlevelAlloted{
+    position: absolute;
+    height: 19px;
+    left:20.46px;
+    right: 130px;
+    top: 276px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.2292px;
+    line-height: 19px; 
+    color: #242D35;
+    
+}
+
+.assessmenttxtAlloted{
+    position: absolute;
+    width: 159px;
+    height: 23px;
+    left: 22.46px;
+    top: 6.95px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17.075px;
+    line-height: 23px;
+    letter-spacing: -0.01em;
+    color: #242D35;
+}
+
+
+.lvlAlloted{
+position: absolute;
+width: 446.51px;
+height: 16.71px;
+left: 648.46px;
+top: 417.25px;
+}
+
+.numofquestionAlloted{
+box-sizing: border-box;
+position: absolute;
+width:273.2px;
+height:39.84px;
+right:800px;
+bottom:2px;
+background: #FFFFFF;
+border: 1px solid #D6DADE;
+border-radius: 6px;
+}
+
+.durationAlloted{
+position: absolute;
+width: 273.2px;
+height:39.84px;
+right:795px;
+bottom:70px;
+background: #FFFFFF;
+border: 1px solid #D6DADE;
+border-radius: 6px;
+}
+
+#dateAlloted{
+position: absolute;
+width: 273.2px;
+height: 39.81px;
+right:500px;
+bottom:70px;
+background: #FFFFFF;
+border: 1px solid #D6DADE;
+border-radius: 6px;
+}
+
+
+#radio1Alloted{
+    position: absolute;
+    right: 680px;
+    top: 298px;
+}
+
+.logo1Alloted{
+    position: absolute;
+    right: 668px;
+    bottom: 185px;
+}
+.basicAlloted{
+position: absolute;
+right:630px;
+top: 299px;
+width: 36px;
+height: 16.9px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 14.3833px;
+line-height: 16px;
+color: #717D8A;
+}
+
+#radio2Alloted{
+    position: absolute;
+    right: 600px;
+    top: 298px;
+}
+
+.logo2Alloted{
+    position: absolute;
+    right:587px;
+    top:300px;
+}
+
+.intermediateAlloted{
+position: absolute;
+right:550px;
+top: 299px;
+width: 36px;
+height: 16.9px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 15.3833px;
+line-height: 16px;
+color: #717D8A;
+}
+
+#radio3Alloted{
+    position: absolute;
+    right:470px;
+    top: 297px;
+}
+
+.logo3Alloted{
+    position: absolute;
+    right:457px;
+    top: 300px;
+
+}
+
+.advancedAlloted{
+position: absolute;
+right:420px;
+top: 300px;
+width: 36px;
+height: 16.9px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 15.3833px;
+line-height: 16px;
+color: #717D8A;
+}
+
+#radio4Alloted{
+    position: absolute;
+    right:350px;
+    top: 297px;
+}
+
+.logo4Alloted{
+    position: absolute;
+    right:330px;
+    top: 300px;
+}
+
+.upskillAlloted{
+position: absolute;
+right:292px;
+top: 298px;
+width: 36px;
+height: 16.9px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 15.3833px;
+line-height: 16px;
+color: #717D8A;
+}
