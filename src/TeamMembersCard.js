@@ -14,6 +14,8 @@ import cardlocation from './assets/TeamMembersCard/cardlocation.svg';
 import notificationIcon from './assets/TeamMembersCard/notification.svg';
 import klogo from './assets/TeamMembersCard/klogo.svg';
 import team1 from './assets/TeamMembersCard/teammem.svg';
+import  Search  from './assets/TeamMembersCard/search.svg';
+import bg from './assets/TeamMembersCard/bg.svg';
 
 const TeamMembersCard = () => {
   const navigate = useNavigate();
@@ -22,7 +24,7 @@ const TeamMembersCard = () => {
   const location = useLocation();
 
   const handleCardClick = (userId) => {
-    navigate(`/TeamMembers/${userId}`);
+    navigate(`/member-details/${userId}`);
   };
 
   useEffect(() => {
@@ -50,6 +52,9 @@ const TeamMembersCard = () => {
     setSearchQuery(event.target.value);
   };
 
+
+  
+
   // Filter the team members based on the search query
   const filteredMembersList = teamMembers.filter((member) => {
     const fullName = `${member.user_ID}-${member.user_FirstName}`.toLowerCase();
@@ -68,7 +73,7 @@ const TeamMembersCard = () => {
         </div>
         {index < 6 && (
           <>
-            <div className={`lo${index + 1}`}>{member.user_Location}</div>
+            <div className={`lo${index + 1}new`}>{member.user_Location}</div>
             <div
               className={`mail${index + 1}`}
               onClick={() => handleCardClick(member.user_ID)}
@@ -90,7 +95,25 @@ const TeamMembersCard = () => {
     navigate(`/member-details/${userId}`);
   };
   
-  return (
+
+  const handleClickProfile1New = () => {
+    handleProfileClick(12345);
+  };
+  const handleClickProfile2New = () => {
+    handleProfileClick(54321);
+  };
+  const handleClickProfile3New = () => {
+    handleProfileClick(98765);
+  };
+  const handleClickProfile4New = () => {
+    handleProfileClick(67890);
+  };
+  const handleClickProfile5New = () => {
+    handleProfileClick(13579);
+  };
+  const handleClickProfile6New = () => {
+    handleProfileClick(24680);
+  };  return (
     <div>
       <div className="SidebarNew">
 <div className="kaninilogo">
@@ -156,7 +179,7 @@ const TeamMembersCard = () => {
       <div className="navbarNew"></div>
       <div className="sboxNew">
         <label>
-          <img id="searchicon" alt="" />
+          <img id="searchicon" src={Search} alt="" />
         </label>
         <input
           type="text"
@@ -177,7 +200,7 @@ const TeamMembersCard = () => {
       <div className="cNameNew">Best Performers</div>
       <div className="ViewAllNew">View All</div>
 
-      <div className="logo1">
+      {/* <div className="logo1">
         <img className="rounded-circle" alt="image" width="60" height="60" />
       </div>
       <div className="logo2">
@@ -194,51 +217,23 @@ const TeamMembersCard = () => {
       </div>
       <div className="logo6">
         <img className="rounded-circle"  alt="image" width="60" height="60" />
-      </div>
+      </div> */}
       
-      <div className="profile1New"></div>
-      <div className="profile2New"></div>
-      <div className="profile3New"></div>
-      <div className="profile4New"></div>
-      <div className="profile5New"></div>
-      <div className="profile6New"></div>
+      <div className="profile1New" onClick={() => handleClickProfile1New(12345)}></div>
+      <div className="profile2New" onClick={() => handleClickProfile2New(54321)}></div>
+      <div className="profile3New" onClick={() => handleClickProfile3New(98765)}></div>
+      <div className="profile4New" onClick={() => handleClickProfile4New(67890)}></div>
+      <div className="profile5New" onClick={() => handleClickProfile5New(13579)}></div>
+      <div className="profile6New" onClick={() => handleClickProfile6New(24680)}></div>
 
-      {/* Display filtered members */}
-      {filteredMembersList.length > 0 ? (
-        filteredMembersList.map((member, index) => (
-          <div key={member.user_ID} className={`member-card${index + 1} ${index === 0 ? 'show' : 'hide'}`}>
-            <div className={`name${index + 1}`}>
-              {member.user_ID} - {member.user_FirstName} {member.user_LastName}
-            </div>
-            <div className={`role${index + 1}`}>
-              {member.user_Departmenr} - {member.user_Designation}
-            </div>
-            {index < 6 && (
-              <>
-                <div className={`lo${index + 1}`}>{member.user_Location}</div>
-                <div
-                  className={`mail${index + 1}`}
-                  onClick={() => handleCardClick(member.user_ID)}
-                >
-                  {/* Mail Icon */}
-                  <i className="mail-icon fas fa-envelope"></i>
-                  {/* Mail Address */}
-                  {member.user_Email}
-                  {/* Copy Icon */}
-                  <i className="copy-icon fas fa-copy"></i>
-                </div>
-              </>
-            )}
-          </div>
-        ))
-      ) : (
-        <div className="no-matching-members">No matching members found.</div>
-      )}
+
 
       {/* New feature: Render the list of filtered members */}
       {renderFilteredMembersNew()}
     
-    <div className="rectangleNew"></div>
+    <div className="rectangleNew">
+      {/* <img src={bg} alt=''/> */}
+    </div>
 
       <div className="lvl1">Skill Level: Beginner</div>
       <div className="lvl2">Skill Level: Intermediate</div>
@@ -247,45 +242,42 @@ const TeamMembersCard = () => {
       <div className="lvl5">Skill Level: Beginner</div>
       <div className="lvl6">Skill Level: Intermediate</div>
 
-      <div className="pgb1"></div>
-      <div className="pgb2"></div>
-      <div className="pgb3"></div>
-      <div className="pgb4"></div>
-      <div className="pgb5"></div>
-      <div className="pgb6"></div>
+      <div className="pgb1new"></div>
+      <div className="pgb2new"></div>
+      <div className="pgb3new"></div>
+      <div className="pgb4new"></div>
+      <div className="pgb5new"></div>
+      <div className="pgb6new"></div>
 
-      <div className="lo1">
-        <img id="location1" src={cardlocation} alt="" />
+      <div className="lo1new">
+        <img id="location1new" src={cardlocation} alt="" />
         {/* <span>Chennai</span> */}
       </div>
 
-      <div className="lo2">
-        <img id="location2" src={cardlocation} alt="" />
+      <div className="lo2new">
+        <img id="location2new" src={cardlocation} alt="" />
         {/* <span>Coimbatore</span> */}
       </div>
 
-      <div className="lo3">
-        <img id="location3" src={cardlocation} alt="" />
+      <div className="lo3new">
+        <img id="location3new" src={cardlocation} alt="" />
         {/* <span>Chennai</span> */}
       </div>
-      <div className="lo4">
-        <img id="location4" src={cardlocation} alt="" />
+      <div className="lo4new">
+        <img id="location4new" src={cardlocation} alt="" />
         {/* <span>Banglore</span> */}
       </div>
 
-      <div className="lo5">
-        <img id="location5" src={cardlocation} alt="" />
+      <div className="lo5new">
+        <img id="location5new" src={cardlocation} alt="" />
         {/* <span>Bangalore</span> */}
       </div>
 
-      <div className="lo6">
-        <img id="location6" src={cardlocation} alt="" />
+      <div className="lo6new">
+        <img id="location6new" src={cardlocation} alt="" />
         {/* <span>Pune</span> */}
       </div>
 
-      
-
-    
 
       <div className="bpp1">Points: 1587</div>
       <div className="bpp2">Points: 1587</div>
@@ -308,18 +300,24 @@ const TeamMembersCard = () => {
         <img className="rounded-circle"  alt="image" width="55" height="55" />
       </div>
 
-      <div className="tbox">
-        <label>
-          <img id="searchicon" alt="" />
-        </label>
-        <div className="se">Search here</div>
-      </div>
+      <div class="tboxnew">
+  <label>
+    <img id="searchiconnew" src={Search} alt="" />
+  </label>
+  <input type="text" class="senew" placeholder="Search here" />
+</div>
 
-      <div className="klogo">
-        <img id="kanini" src={klogo} alt="" />
+
+      <div className="klogonew">
+        <img id="kanininew" src={klogo} alt="" />
       </div>
 
       <div className='navname'>Subramaniyam</div>   
+
+      <div className="hr"></div>
+   <div className="hr1"></div>
+   <div className="hr2"></div>
+   
 </div>
   )};
 

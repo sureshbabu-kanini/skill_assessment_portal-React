@@ -15,9 +15,16 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const closeModal = () => {};
+  const closeModal = () => { };
 
-  const togglePassword = () => {};
+  const togglePassword = () => {
+    const passwordInput = document.getElementById('password');
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+    } else {
+      passwordInput.type = 'password';
+    }
+  };
 
   useEffect(() => {
     localStorage.clear();
@@ -62,7 +69,7 @@ export default function Login() {
         toast.success('Login successful', {
           position: 'top-right',
           autoClose: 3000,
-          onClose: () => navigate('/Dashboard'), 
+          onClose: () => navigate('/Dashboard'),
         });
       }
     } catch (error) {
@@ -73,7 +80,7 @@ export default function Login() {
       });
     }
   };
-  
+
   return (
     <div className="container">
       <div className="row">
@@ -92,7 +99,15 @@ export default function Login() {
               <label htmlFor="username">Email ID</label>
               <input type="text" id="username" name="username" placeholder="name@kanini.com" value={email} onChange={(e) => setEmail(e.target.value)} />
               <label htmlFor="password">Password</label>
-              <input type="password" id="password" name="password" placeholder="*******" value={password} onChange={(e) => setPassword(e.target.value)} />
+              <input
+                type="password"
+                id="password" 
+                name="password"
+                placeholder="*******"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+
               <i>
                 <img src={eyelogo} id="togglePassword" onClick={togglePassword} alt="Toggle Password" />
               </i>

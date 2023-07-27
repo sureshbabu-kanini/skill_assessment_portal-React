@@ -1,16 +1,15 @@
-
 .body{
     background: #1E1E1E;
 }
 
-.SidebarNew{
+.SidebarNew {
     position: absolute;
-width: 280px;
-height: 1080px;
-left: 0px;
-top: 0px;
-background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
-}
+    width: 280px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(179.54deg, #9cd8ef 5.55%, #96d9f4 194.36%);
+  }
 .kaninilogoNew { 
     width:93px;
     height:47px;
@@ -23,7 +22,7 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
     width:93px;
     height:33px;
     position:absolute;
-    left:0px;
+    left:3px;
     top:0px;
     font-family:Roboto;
     text-align:left;
@@ -35,7 +34,7 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
     width:93px;
     height:19px;
     position:absolute;
-    left:0px;
+    left:3px;
     top:28px;
     font-family:Manrope;
     text-align:left;
@@ -46,14 +45,14 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
     width:47px;
     height:47px;
     position:absolute;
-    left:50px;
+    left:55px;
     top:50px;
     background-repeat:no-repeat;
     background-size:cover;
 }
 .dashboardNew { 
     position:absolute;
-    left:83px;
+    left:100px;
     top:155px;
     font-family:Manrope;
     text-align:left;
@@ -63,14 +62,14 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
 }
 .dashboard1New { 
     position:absolute;
-    left:45px;
+    left:55px;
     top:154px;
     right:237px;
     bottom:905px;
 }
 .TakeassNew { 
     position:absolute;
-    left:83px;
+    left:100px;
     top: 220px;
     font-family:Manrope;
     text-align:left;
@@ -80,14 +79,14 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
 }
 .Takeass1New { 
     position:absolute;
-    left:45px;
+    left:55px;
     top:220px;
     right:237px;
     bottom:824.39px;
 }
 .AllocateassNew { 
     position:absolute;
-    left:83px;
+    left:100px;
     top: 290px;
     font-family:Manrope;
     text-align:left;
@@ -97,14 +96,14 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
 }
 .Allocateass1New { 
     position:absolute;
-    left:45px;
+    left:55px;
     top:290px;
     right:240px;
     bottom:741px;
 }
 .ResultNew { 
     position:absolute;
-    left:83px;
+    left:100px;
     top: 424px;
     font-family:Manrope;
     text-align:left;
@@ -114,14 +113,14 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
 }
 .Result1New { 
     position:absolute;
-    left:45px;
+    left:55px;
     top:424px;
     right:240px;
     bottom: 656px;
 }
 .teammemNew{
     position:absolute;
-    left:83px;
+    left:100px;
     top: 360px;
     font-family:Manrope;
     text-align:left;
@@ -132,7 +131,7 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
 }
 .Team1New{
     position:absolute;
-    left:45px;
+    left:55px;
     top:360px;
     right: 235px;
     bottom: 574.95px;
@@ -140,7 +139,7 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
 }
 .SettingsNew{
     position:absolute;
-    left:83px;
+    left:100px;
     top: 480px;
     font-family:Manrope;
     text-align:left;
@@ -151,7 +150,7 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
 }
 .Settings1New{
     position:absolute;
-    left:45px;
+    left:55px;
     top:480px;
     right: 237px;
     bottom: 491.38px;
@@ -159,7 +158,7 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
 }
 .LogoutNew{
     position:absolute;
-    left:85px;
+    left:100px;
     top: 991px;
     font-family:Manrope;
     text-align:left;
@@ -170,47 +169,27 @@ background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
 }
 .Logout1New{
     position:absolute;
-    left:45px;
+    left:55px;
     top:991px;
     right: 242.55px;
     bottom: 69px;
 
 }
 
-.rectangleNew{
-    /* Mask group */
+.rectangleNew {
+   /* Kanini Logo_H1 1 */
 
 position: absolute;
-width: 242px;
-height: 327px;
-left: 29px;
-top: 705px;
+width: 980px;
+height: 420px;
+left:-730px;
+top: 720px;
 
+background: url(assets/TeamMembersCard/bg.svg);
+opacity: 1.06;
 
+  }
 
-/* Rectangle 11918 */
-
-position: absolute;
-width: 242px;
-height: 327px;
-left: 29px;
-top: 705px;
-
-background: #D9D9D9;
-
-
-/* Kanini Logo_H1 1 */
-
-position: absolute;
-width: 1016px;
-height: 516px;
-left: -344px;
-top: 619px;
-
-background: url(./assets/TeamMembersCard/kaniniBg.jpeg);
-opacity: 2.10;
-
-}
 .bellNew {
     display: flex;
     align-items: center;
@@ -221,7 +200,7 @@ opacity: 2.10;
   }
   
   /* Replace the class name with the appropriate class for your notification icon image */
-  .bell img {
+  .bellNew img {
     width: 100%;
     height: 100%;
     /* Add any additional styles for the notification icon image */
@@ -258,7 +237,7 @@ line-height: 33px;
 color: #242D35;
 
 }
-.subheading{
+.subheadingNew{
     position: absolute;
 width: 336px;
 height: 18px;
@@ -284,7 +263,7 @@ color: #A8B0B9;
 .sboxNew {
     margin-top: 130px;
     position: relative;
-    padding-left: 105px;
+    padding-left: 345px;
     padding-right: 1100px;
 
   }
@@ -294,19 +273,20 @@ color: #A8B0B9;
     height: 20px;
     position: absolute;
     top: 50%;
-    left: 340px;
+    left: 350px;
     transform: translateY(-50%);
   }
   
-  .se {
-    border: 1px ;
+  .seNew {
+    border: 1px;
     background: none;
     color: #0d0c0c;
-    font-size: 16px; /* Adjust the font size as needed */
-    padding-left: 50px;
+    font-size: 16px;
+    padding-left: 50px !important;
     outline: none;
     width: 200px;
   }
+  
   
   /* ... (existing styles) ... */
   
@@ -324,131 +304,8 @@ background: #FFFFFF;
 border: 1px solid #EAE9EA;
 border-radius: 8px;
 }
-.tbox{
-/* Group 5774 */
 
-position: absolute;
-width: 386px;
-height: 40px;
-left: 1213px;
-top: 38px;
-
-
-
-/* Rectangle 158 */
-
-box-sizing: border-box;
-
-position: absolute;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-
-background: #FFFFFF;
-/* TEXT_COLOR/TEXT-300 */
-
-border: 0.8px solid #D6DADE;
-border-radius: 4.8px;
-
-
-/* Group 1509 */
-
-position: absolute;
-left: 4.15%;
-right: 65.54%;
-top: 32.5%;
-bottom: 32.5%;
-
-
-
-/* loupe (2) */
-
-position: absolute;
-left: 4.15%;
-right: 92.49%;
-top: 25%;
-bottom: 32.5%;
-
-
-
-/* Union */
-
-position: absolute;
-left: 4.15%;
-right: 92.49%;
-top: 50%;
-bottom: 32.5%;
-
-/* TEXT_COLOR/TEXT-400 */
-background: #A8B0B9;
-
-
-/* Shape */
-
-position: absolute;
-left: 4.15%;
-right: 89.89%;
-top: 35%;
-bottom: 36.37%;
-
-background: rgba(255, 255, 255, 0.43);
-
-
-/* Path */
-
-position: absolute;
-left: 4.15%;
-right: 92.89%;
-top: 25%;
-bottom: 36.37%;
-
-
-
-/* Path */
-
-position: absolute;
-left: 4.42%;
-right: 78.16%;
-top: 20.64%;
-bottom: 39.02%;
-
-
-
-/* Path */
-
-position: absolute;
-left: 6.45%;
-right: 92.49%;
-top: 35.29%;
-bottom: 32.5%;
-
-background: rgba(255, 255, 255, 0.43);
-
-
-/* Week */
-
-position: absolute;
-left: 60.84%;
-right: 65.54%;
-top: 3.5%;
-bottom: 32.5%;
-
-font-family: 'Manrope';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 14px;
-/* identical to box height, or 100% */
-letter-spacing: 0.2px;
-
-/* TEXT_COLOR/TEXT-400 */
-color: #A8B0B9;
-
-mix-blend-mode: normal;
-
-}
-.klogo {
+.klogonew {
     position: absolute;
     width: 48px;
     height: 48px;
@@ -458,7 +315,7 @@ mix-blend-mode: normal;
     overflow: hidden;
   }
   
-  .klogo img {
+  .klogonew img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -485,7 +342,7 @@ color: #242D35;
 
 
 }
-.profile2{
+.profile2New{
     box-sizing: border-box;
 
 position: absolute;
@@ -498,7 +355,7 @@ background: #FFFFFF;
 border: 1px solid #EAE9EA;
 border-radius: 8px;
 }
-.profile3{
+.profile3New{
     box-sizing: border-box;
 
 position: absolute;
@@ -523,7 +380,7 @@ top: 232px;
 background: #FFFFFF;
 border: 1px solid #EAE9EA;
 }
-.RM{
+.RMNew{
     position: absolute;
 width: 173px;
 height: 25px;
@@ -542,7 +399,7 @@ line-height: 25px;
 
 color: #1F2131;
 }
-.RMname{
+.RMnameNew{
     position: absolute;
     width: 121px;
     height: 22px;
@@ -562,7 +419,7 @@ color: #1F2131;
     color: #787878;
     
 }
-.category{
+.categoryNew{
     box-sizing: border-box;
 
 position: absolute;
@@ -574,7 +431,7 @@ top: 449px;
 background: #FFFFFF;
 border: 1px solid #EAE9EA;
 }
-.cName{
+.cNameNew{
     position: absolute;
 width: 137px;
 height: 25px;
@@ -594,7 +451,7 @@ line-height: 25px;
 color: #1F2131;
 
 }
-.ViewAll{
+.ViewAllNew{
     position: absolute;
 width: 350px;
 height: 19px;
@@ -606,7 +463,7 @@ top: 489px;
 font-family: 'Manrope';
 font-style: normal;
 font-weight: 500;
-font-size: 11px;
+font-size: 13px;
 line-height: 15px;
 text-align: right;
 
@@ -664,7 +521,7 @@ top: 258px;
 .rounded-circle {
     border-radius: 90%;
 }
-.logo2{
+.logo2n{
     position: absolute;
 width: 100px;
 height: 100px;
@@ -705,6 +562,7 @@ width: 163px;
 height: 56.56px;
 left: 425px;
 top: 342px;
+white-space: nowrap;
 
 /* Subheading/Semibold/18px */
 
@@ -725,6 +583,7 @@ width: 152px;
 height: 25px;
 left: 791px;
 top: 346px;
+white-space: nowrap;
 
 /* Subheading/Semibold/18px */
 
@@ -756,6 +615,7 @@ font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 25px;
+white-space: nowrap;
 /* identical to box height */
 
 text-align: center;
@@ -778,6 +638,7 @@ font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 25px;
+white-space: nowrap;
 /* identical to box height */
 
 text-align: center;
@@ -804,6 +665,7 @@ line-height: 25px;
 /* identical to box height */
 
 text-align: center;
+white-space: nowrap;
 
 /* TEXT_COLOR/TEXT-800 */
 
@@ -815,6 +677,7 @@ width: 165px;
 height: 25px;
 left: 1147px;
 top: 749px;
+white-space: nowrap;
 
 /* Subheading/Semibold/18px */
 
@@ -1068,7 +931,7 @@ text-align: center;
 color: #666565;
 
 }
-.pgb1{
+.pgb1new{
     position: absolute;
     width: 70px;
     height: 4.25px;
@@ -1080,7 +943,7 @@ color: #666565;
     background: #AAD064;
     border-radius: 4px;
 }
-.pgb2{
+.pgb2new{
     position: absolute;
     width: 120px;
     height: 4.25px;
@@ -1092,7 +955,7 @@ color: #666565;
     background: #AAD064;
     border-radius: 4px;
 }
-.pgb3{
+.pgb3new{
     position: absolute;
 width: 70px;
 height: 4.25px;
@@ -1104,7 +967,7 @@ top: 470.1px;
 background: #AAD064;
 border-radius: 4px;
 }
-.pgb4{
+.pgb4new{
     position: absolute;
 width: 70px;
 height: 4.23px;
@@ -1116,7 +979,7 @@ top: 870.46px;
 background: #AAD064;
 border-radius: 4px;
 }
-.pgb5{
+.pgb5new{
     position: absolute;
 width: 70px;
 height: 4.25px;
@@ -1129,7 +992,7 @@ background: #AAD064;
 border-radius: 4px;
 }
 
-.pgb6{
+.pgb6new{
     position: absolute;
 width: 120px;
 height: 4.25px;
@@ -1141,7 +1004,7 @@ top: 870.46px;
 background: #AAD064;
 border-radius: 4px;
 }
-.lo1 {
+.lo1new {
     position: absolute;
     width: 55px;
     height: 16px;
@@ -1155,20 +1018,20 @@ border-radius: 4px;
     line-height: 19px;
 }
 
-#location1 {
+#location1new {
     position: absolute;
-    right: 100%;
+    right: 110%;
     margin-left: auto;
     top: 15%;
     bottom: 50.16%;
     /* TEXT_COLOR/TEXT-500 */
     /* Adjust the spacing between the image and text */
 }
-.lo2{
+.lo2new{
     position: absolute;
     width: 78px;
     height: 16px;
-    left: 825px;
+    left: 820px;
     top: 500px;
     
     /* Medium/14px */
@@ -1179,17 +1042,17 @@ border-radius: 4px;
     font-size: 14px;
     line-height: 19px;
 }
-#location2{
+#location2new{
   
     position: absolute;
-    right: 90%;
+    right: 105%;
     margin-left: auto;
     top: 15%;
     bottom: 50.16%;
 
 }
 
-.lo3{
+.lo3new{
     position: absolute;
     width: 55px;
     height: 16px;
@@ -1204,14 +1067,14 @@ border-radius: 4px;
     font-size: 14px;
     line-height: 19px;
 }
-#location3{
+#location3new{
     position: absolute;
     right: 115%;
     margin-left: auto;
     top: 15%;
     bottom: 50.16%;
 }
-.lo4{
+.lo4new{
     position: absolute;
 width: 67px;
 height: 16px;
@@ -1226,14 +1089,14 @@ font-weight: 500;
 font-size: 14px;
 line-height: 19px;
 }
-#location4{
+#location4new{
     position: absolute;
-    right: 100%;
+    right: 110%;
     margin-left: auto;
     top: 15%;
     bottom: 50.16%;
 }
-.lo5{
+.lo5new{
     position: absolute;
 width: 67px;
 height: 19px;
@@ -1248,14 +1111,14 @@ font-weight: 500;
 font-size: 14px;
 line-height: 19px;
 }
-#location5{
+#location5new{
     position: absolute;
-    right: 90%;
+    right: 110%;
     margin-left: auto;
     top: 10%;
     bottom: 50.16%; 
 }
-.lo6{
+.lo6new{
     position: absolute;
 width: 34px;
 height: 19px;
@@ -1271,9 +1134,9 @@ font-size: 14px;
 line-height: 19px;
 
 }
-#location6{
+#location6new{
     position: absolute;
-    right: 120%;
+    right: 125%;
     margin-left: auto;
     top: 10%;
     bottom: 50.16%; 
@@ -1302,7 +1165,7 @@ color: #787878;
     position: absolute;
 width: 158px;
 height: 22px;
-left: 1530px;
+left: 1510px;
 top: 640px;
 
 /* Menu/Medium/16px */
@@ -1321,7 +1184,7 @@ color: #787878;
     position: absolute;
 width: 148px;
 height: 22px;
-left: 1523px;
+left: 1513px;
 top: 745px;
 
 /* Menu/Medium/16px */
@@ -1380,7 +1243,7 @@ color: #787878;
 position: absolute;
 width: 234px;
 height: 18px;
-left: 1471px;
+left: 1510px;
 top: 562px;
 
 /* Caption/Regular/13px */
@@ -1402,7 +1265,7 @@ color: #4F5B67;
 position: absolute;
 width: 234px;
 height: 18px;
-left: 1488px;
+left: 1510px;
 top: 667px;
 
 /* Caption/Regular/13px */
@@ -1424,7 +1287,7 @@ color: #4F5B67;
 position: absolute;
 width: 234px;
 height: 18px;
-left: 1480px;
+left: 1515px;
 top: 775px;
 
 /* Caption/Regular/13px */
@@ -1446,7 +1309,7 @@ color: #4F5B67;
 position: absolute;
 width: 234px;
 height: 18px;
-left: 1478px;
+left: 1510px;
 top: 880px;
 
 /* Caption/Regular/13px */
@@ -1490,7 +1353,7 @@ color: #4F5B67;
     position: absolute;
 width: 82px;
 height: 19px;
-left: 1555px;
+left: 1515px;
 top: 585px;
 
 /* Medium/14px */
@@ -1507,7 +1370,7 @@ color: #000000;
     position: absolute;
 width: 82px;
 height: 19px;
-left: 1555px;
+left: 1515px;
 top: 690px;
 
 /* Medium/14px */
@@ -1526,7 +1389,7 @@ color: #000000;
     position: absolute;
 width: 82px;
 height: 19px;
-left: 1555px;
+left: 1515px;
 top: 798px;
 
 /* Medium/14px */
@@ -1543,7 +1406,7 @@ color: #000000;
     position: absolute;
 width: 82px;
 height: 19px;
-left: 1558px;
+left: 1518px;
 top: 905px;
 
 /* Medium/14px */
@@ -1560,7 +1423,7 @@ color: #000000;
     position: absolute;
     width: 82px;
     height: 19px;
-    left: 1558px;
+    left: 1518px;
     top: 1000px;
     
     /* Medium/14px */
@@ -1639,7 +1502,7 @@ top: 541px;
     position: absolute;
     width: 100%; /* Adjust the width as needed */
     height: 19px; /* Adjust the height as needed */
-    left: 750px;
+    left: 730px;
     top: 541px;
   }
   
@@ -1656,7 +1519,7 @@ gap: 10px;
 position: absolute;
 width: 220.33px;
 height: 19px;
-left: 1080px;
+left: 1100px;
 top: 541px;
 
 }
@@ -1673,7 +1536,7 @@ gap: 10px;
 position: absolute;
 width: 220.33px;
 height: 19px;
-left: 395px;
+left: 365px;
 top: 925.26px;
 
 }
@@ -1690,7 +1553,7 @@ gap: 10px;
 position: absolute;
 width: 220.33px;
 height: 19px;
-left: 737px;
+left: 757px;
 top: 927px;
 
 
@@ -1779,14 +1642,87 @@ flex-grow: 0;
 
 
 
+/* Mail Icon */
 .mail-icon {
     /* Customize the icon styles as needed */
     font-size: 16px;
-    color: #8f8c8c; /* Icon color */
+    color: #858484; /* Icon color */
   }
   
+  /* Copy Icon */
   .copy-icon {
     /* Customize the icon styles as needed */
     font-size: 16px;
-    color: #807f7f; /* Icon color */
+    color: #858484; /* Icon color */
   }
+  
+/* Apply styles to the tboxnew container */
+.tboxnew {
+  position: absolute;
+  width: 386px;
+  height: 40px;
+  left: 1213px;
+  top: 38px;
+}
+
+/* Apply styles to the input field */
+.senew {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #FFFFFF;
+  /* TEXT_COLOR/TEXT-300 */
+  border: 0.8px solid #D6DADE;
+  border-radius: 4.8px;
+  padding-left: 50px !important;
+  outline: none;
+  width: 200px; /* Update this to the desired width */
+}
+.searchiconnew{
+ width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 350px;
+    transform: translateY(-50%);
+}
+
+.hr{
+    /* sep */
+
+position: absolute;
+width: 430px;
+height: 0px;
+left: 1443px;
+top: 620px;
+
+border: 1px solid #DCDCDC;
+
+}
+.hr1{
+/* sep */
+
+position: absolute;
+width: 430px;
+height: 0px;
+left: 1443px;
+top: 729px;
+
+border: 1px solid #DCDCDC;
+
+}
+.hr2{
+    /* sep */
+
+position: absolute;
+width: 430px;
+height: 0px;
+left: 1443px;
+top: 884px;
+
+border: 1px solid #DCDCDC;
+
+}
