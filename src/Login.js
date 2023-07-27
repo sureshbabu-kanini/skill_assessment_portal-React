@@ -1,49 +1,79 @@
-import React, { useState } from 'react';
+/* eslint-disable */
+import React, { useState, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mainlogo from './assets/SignInImages/mainlogo.svg';
 import kaninilogo from './assets/SignInImages/kanini logo.svg';
 import eyelogo from './assets/SignInImages/eye.svg';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const closeModal = () => {
-  };
+  const closeModal = () => {};
 
-  const togglePassword = () => {
-  };
+  const togglePassword = () => {};
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
 
+
+  const handleLogin = async () => {
     const payload = {
       User_Email: email,
-      User_Password: password
+      User_Password: password,
     };
 
-    fetch('https://localhost:7198/api/Token', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    })
-      .then(response => response.text())
-      .then(token => {
-        console.log(token);
-        localStorage.setItem('userEmail', email);
-        navigate('/Dashboard');
-      })
-      .catch(error => {
-        console.error('Error:', error);
+    try {
+      const response = await fetch('https://localhost:7198/api/Token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
+
+      if (!response.ok) {
+        throw new Error('Invalid email or password');
+      }
+
+      const token = await response.text();
+      console.log(token);
+      localStorage.setItem('userEmail', email);
+      return true; // Successful login
+    } catch (error) {
+      console.error('Error:', error);
+      throw new Error('Invalid email or password');
+    }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const success = await handleLogin();
+      if (success) {
+        toast.success('Login successful', {
+          position: 'top-right',
+          autoClose: 3000,
+          onClose: () => navigate('/Dashboard'), 
+        });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error('Invalid email or password', {
+        position: 'top-right',
+        autoClose: 3000,
+      });
+    }
+  };
+  
   return (
     <div className="container">
       <div className="row">
@@ -55,7 +85,7 @@ export default function Login() {
             <div id="image2">
               <img src={kaninilogo} alt="kaninilogo" />
             </div>
-            <h1 style={{ textAlign: 'center',marginRight: '65%' }}>Sign In</h1>
+            <h1 style={{ textAlign: 'center', marginRight: '65%' }}>Sign In</h1>
             <p style={{ paddingBottom: '2%', display: 'inline-block' }}>Welcome back! Please enter your email and password</p>
 
             <form onSubmit={handleSubmit}>
@@ -98,10 +128,12 @@ export default function Login() {
                 </div>
               </div>
               <input type="submit" value="SIGN IN" className="button1 blue-buttonNew" style={{ color: 'white' }} />
-      </form>
-    </div>
-  </div>
+            </form>
+          </div>
+        </div>
       </div>
+      {/* Toast Container */}
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }
