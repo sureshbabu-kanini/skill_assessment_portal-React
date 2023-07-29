@@ -24,7 +24,7 @@ const TeamMembersCard = () => {
   const location = useLocation();
 
   const handleCardClick = (userId) => {
-    navigate(`/member-details/${userId}`);
+    navigate(`/TeamMembers/${userId}`);
   };
 
   useEffect(() => {

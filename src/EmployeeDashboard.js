@@ -1,6 +1,15 @@
-/* eslint-disable */
+
 import './EmployeeDashboard.css';
+import { Link, useLocation } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
+import das from './assets/TeamMembersCard/das.svg';
+import takeass from './assets/TeamMembersCard/takeass.svg';
+import kaninilogo from './assets/TeamMembersCard/kaninilogo.svg';
+import allocateass from './assets/TeamMembersCard/allocateass.svg';
+import result from './assets/TeamMembersCard/result.svg';
+import team1 from './assets/TeamMembersCard/teammem.svg';
+import setting from './assets/TeamMembersCard/setting.svg';
+import logout from './assets/TeamMembersCard/logout.svg';
 import AssessmentsBulb from './assets/EmployeeDashboardImages/Bulb.png';
 
 export default function EmployeeDashboard() {
@@ -79,18 +88,18 @@ export default function EmployeeDashboard() {
       if (data !== null && !isNaN(data)) {
         setTotalPoints(String(data));
       } else {
-        setTotalPoints('0'); 
+        setTotalPoints('0');
       }
     } catch (error) {
       console.error('Error fetching total points:', error);
-      setTotalPoints('0'); 
+      setTotalPoints('0');
     }
   };
 
   useEffect(() => {
     const timer = setTimeout(() => {
       fetchTotalPoints();
-    }, 1000); 
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -112,6 +121,10 @@ export default function EmployeeDashboard() {
   useEffect(() => {
     fetchResultCount();
   }, []);
+
+  const getButtonClassName = (path) => {
+    return window.location.pathname === path ? 'activeButton' : 'inactiveButton';
+  };
 
   return (
     <div className='MainDiv'>
@@ -235,61 +248,91 @@ export default function EmployeeDashboard() {
           </div>
         </div>
 
-        <div className="Sidebar">
-          <div className="kaninilogo"><span className="kaninilogo1">Kanini</span><span className="kaninilogo2">Assessment</span></div>
-          <div className="kaninilogo3">
+        <div className="SidebarNew">
+          <div className="kaninilogo">
+            <span className="kaninilogo1New">Kanini</span>
+            <span className="kaninilogo2New">Assessment</span>
           </div>
-          {/* <div className="Sidebar"> */}
-          <button className="dashboard">Dashboard</button>
-          <div className="dashboard1">
+          <div className="kaninilogo3New">
+            <img src={kaninilogo} alt="" />
           </div>
-          <button className="Takeass">Take Assessment</button>
-          <div className="Takeass1">
+          <div>
+            <Link to="/Dashboard" className={getButtonClassName('/dashboard')}>
+              <span className="dashboardNew">Dashboard</span>
+              <div className="dashboard1New">
+                <img src={das} alt="" />
+              </div>
+            </Link>
+            <Link to="/take-assessment" className={getButtonClassName('/take-assessment')}>
+              <span className="TakeassNew">Take Assessment</span>
+              <div className="Takeass1New">
+                <img src={takeass} alt="" />
+              </div>
+            </Link>
+            <Link to="/AllocatedAssessment" className={getButtonClassName('/allocated-assessment')}>
+              <span className="AllocateassNew">Allocated Assessment</span>
+              <div className="Allocateass1New">
+                <img src={allocateass} alt="" />
+              </div>
+            </Link>
+            <Link to="/result" className={getButtonClassName('/result')}>
+              <span className="ResultNew">Result</span>
+              <div className="Result1New">
+                <img src={result} alt="" />
+              </div>
+            </Link>
+            <Link to="/TeamMembersCard" className={getButtonClassName('/team-members')}>
+              <span className="teammemNew">Team Members</span>
+              <div className="Team1New">
+                <img src={team1} alt="" />
+              </div>
+            </Link>
+            <Link to="/Settings" className={getButtonClassName('/settings')}>
+              <span className="SettingsNew">Settings</span>
+              <div className="Settings1New">
+                <img src={setting} alt="" />
+              </div>
+            </Link>
+            <Link to="/logout" className={getButtonClassName('/logout')}>
+              <span className="LogoutNew">Logout</span>
+              <div className="Logout1New">
+                <img src={logout} alt="" />
+              </div>
+            </Link>
+            <div className="rectangleNew"></div>
           </div>
-          <button className="Allocateass">Allocated Assessment</button>
-          <div className="Allocateass1">
+        </div>
+        <div className="Topbar"></div>
+
+        <div className="WelcomeTitle">Welcome</div>
+        <div className="WelcomeDetails">
+          View complete details of all locations and their corresponding details.
+        </div>
+
+        <button className="AddQuestionsButton">
+          <div className="AddQuestionsText">Add Questions</div>
+          <div className="AddQuestionsButtonVector_">
+            <img src="assets/EmployeeDashboardImages/AddQuestions.svg" alt="" />
           </div>
-          <button className="Result">Result</button>
-          <div className="Result1_">
+        </button>
+
+        <div className="EmployeeProfile">
+          <div className="ProfilePicture">
+            {userImageURL && (
+              <img
+                src={userImageURL}
+                alt="User Profile"
+              />
+            )}
           </div>
-          <button className="Settings">Settings</button>
-          <div className="Settings1_">
+          <div className="ProfileName">
+            {profileData && profileData[0].user_FirstName}  {profileData && profileData[0].user_LastName}
           </div>
-          <button className="Logout">Logout</button>
-          <div className="Logout1">
-          </div>
+          <div className="EmployeeID"> {profileData && profileData[0].user_ID}</div>
+          <div className="EmployeePosition"> {profileData && profileData[0].user_Departmenr}</div>
+          <div className="EmployeeRole">{profileData && profileData[0].user_Designation}</div>
         </div>
       </div>
-      <div className="Topbar"></div>
-
-      <div className="WelcomeTitle">Welcome</div>
-      <div className="WelcomeDetails">
-        View complete details of all locations and their corresponding details.
       </div>
-
-      <button className="AddQuestionsButton">
-        <div className="AddQuestionsText">Add Questions</div>
-        <div className="AddQuestionsButtonVector_">
-          <img src="assets/EmployeeDashboardImages/AddQuestions.svg" alt="" />
-        </div>
-      </button>
-
-      <div className="EmployeeProfile">
-        <div className="ProfilePicture">
-          {userImageURL && (
-            <img
-              src={userImageURL}
-              alt="User Profile"
-            />
-          )}
-        </div>
-        <div className="ProfileName">
-          {profileData && profileData[0].user_FirstName}  {profileData && profileData[0].user_LastName}
-        </div>
-        <div className="EmployeeID"> {profileData && profileData[0].user_ID}</div>
-        <div className="EmployeePosition"> {profileData && profileData[0].user_Departmenr}</div>
-        <div className="EmployeeRole">{profileData && profileData[0].user_Designation}</div>
-      </div>
-    </div>
-  );
+      );
 }

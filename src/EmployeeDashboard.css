@@ -116,6 +116,194 @@ body, .OverviewTitle, .OngoingAssessedText, .CompletedAssessedText, .PointsEarne
 
 }
 
+.SidebarNew {
+    position: absolute;
+    width: 280px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(179.54deg, #9cd8ef 5.55%, #96d9f4 194.36%);
+  }
+.kaninilogoNew { 
+    width:93px;
+    height:47px;
+    position:absolute;
+    left:123px;
+    top:50px;
+}
+.kaninilogo1New { 
+    color:rgba(12.000000234693289, 17.00000088661909, 22.000000588595867, 1);
+    width:93px;
+    height:33px;
+    position:absolute;
+    left:3px;
+    top:0px;
+    font-family:Roboto;
+    text-align:left;
+    font-size:28px;
+    letter-spacing:10;
+}
+.kaninilogo2New { 
+    color:rgba(55.17031118273735, 63.178905844688416, 71.18750050663948, 1);
+    width:93px;
+    height:19px;
+    position:absolute;
+    left:3px;
+    top:28px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:14px;
+    letter-spacing:9;
+}
+.kaninilogo3New { 
+    width:47px;
+    height:47px;
+    position:absolute;
+    left:55px;
+    top:50px;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.dashboardNew { 
+    position:absolute;
+    left:100px;
+    top:155px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+}
+.dashboard1New { 
+    position:absolute;
+    left:55px;
+    top:154px;
+    right:237px;
+    bottom:905px;
+}
+.TakeassNew { 
+    position:absolute;
+    left:100px;
+    top: 220px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+}
+.Takeass1New { 
+    position:absolute;
+    left:55px;
+    top:220px;
+    right:237px;
+    bottom:824.39px;
+}
+.AllocateassNew { 
+    position:absolute;
+    left:100px;
+    top: 290px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+}
+.Allocateass1New { 
+    position:absolute;
+    left:55px;
+    top:290px;
+    right:240px;
+    bottom:741px;
+}
+.ResultNew { 
+    position:absolute;
+    left:100px;
+    top: 424px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+}
+.Result1New { 
+    position:absolute;
+    left:55px;
+    top:424px;
+    right:240px;
+    bottom: 656px;
+}
+.teammemNew{
+    position:absolute;
+    left:100px;
+    top: 360px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+
+}
+.Team1New{
+    position:absolute;
+    left:55px;
+    top:360px;
+    right: 235px;
+    bottom: 574.95px;
+
+}
+.SettingsNew{
+    position:absolute;
+    left:100px;
+    top: 480px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+
+}
+.Settings1New{
+    position:absolute;
+    left:55px;
+    top:480px;
+    right: 237px;
+    bottom: 491.38px;
+
+}
+.LogoutNew{
+    position:absolute;
+    left:100px;
+    top: 991px;
+    font-family:Manrope;
+    text-align:left;
+    font-size:16px;
+    letter-spacing:0;
+    cursor: pointer;
+
+}
+.Logout1New{
+    position:absolute;
+    left:55px;
+    top:991px;
+    right: 242.55px;
+    bottom: 69px;
+
+}
+
+.rectangleNew {
+   /* Kanini Logo_H1 1 */
+
+position: absolute;
+width: 980px;
+height: 420px;
+left:-730px;
+top: 720px;
+
+background: url(assets/TeamMembersCard/bg.svg);
+opacity: 1.06;
+
+  }
+
 .NumberOfOngoingAssessed {
 
     /* JS functionality needed to be added (IMPORTANT) */
