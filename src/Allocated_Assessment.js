@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Allocated_Assessment.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Allocated_Assessment() {
   const [isEditMode, setIsEditMode] = useState(false);
@@ -63,6 +64,15 @@ export default function Allocated_Assessment() {
         console.error('Error fetching user data:', error);
       });
   }, []);
+
+  const navigate = useNavigate();
+  const handleBackClick = () => {
+    navigate('/AllocatedAssessment');
+  };
+
+  const handleConfirmClick = () => {
+    navigate('/StartAssessment');
+  };
 
   return (
     <div>
@@ -170,11 +180,11 @@ export default function Allocated_Assessment() {
       <div className="bfs1">You must complete this assessment in one session - make sure your internet is reliable</div>
       <div className="bfs2">You can retake this assessment once if you don't earn a badge</div>
       <div className="bfs3">We won't show your results to anyone without your permission</div>
-      <div className="back">Back</div>
+      <div className="back" onClick={handleBackClick}>Back</div>
       <div className="btn">
         <button style={{ backgroundColor: '#7BCCED', borderColor: '#7BCCED' }}></button>
       </div>
-      <div className="confirm">Confirm</div>
+      <div className="confirm" onClick={handleConfirmClick}>Confirm</div>
       <div className="icon1"><img src="images/icon1.svg" alt="" /></div>
       <div className="icon2"><img src="images/icon2.svg" alt="" /></div>
       <div className="icon3"><img src="images/icon3.svg" alt="" /></div>

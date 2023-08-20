@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Allocated_Assessment_Detail.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Allocated_Assessment_Detail() {
   const [isEditMode, setIsEditMode] = useState(false);
@@ -51,7 +52,8 @@ export default function Allocated_Assessment_Detail() {
           .get(assessmentApiUrl)
           .then(assessmentResponse => {
             const assessmentData = assessmentResponse.data;
-            const fetchedAssessmentId = assessmentData.assessmentId;
+            const fetchedAssessmentId = assessmentData.assessment_ID;
+            localStorage.setItem('assessmentId', fetchedAssessmentId);
             setUserData(prevUserData => ({
               ...prevUserData,
               assessmentId: fetchedAssessmentId,
@@ -70,6 +72,16 @@ export default function Allocated_Assessment_Detail() {
         console.error('Error fetching user data:', error);
       });
   }, []);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/Allocated');
+  };
+
+  const handleBackClick = () => {
+    navigate('/Alloted');
+  };
 
     
   return (
@@ -193,11 +205,12 @@ export default function Allocated_Assessment_Detail() {
       <div className="bfs1">You must complete this assessment in one session - make sure your internet is reliable</div>
       <div className="bfs2">You can retake this assessment once if you don't earn a badge</div>
       <div className="bfs3">We won't show your results to anyone without your permission</div>
-      <div className="back">Back</div>
+
+      <div className="back" onClick={handleBackClick}>Back</div>
       <div className="btn">
         <button style={{ backgroundColor: '#7BCCED', borderColor: '#7BCCED' }}></button>
       </div>
-      <div className="confirm">Confirm</div>
+      <div className="confirm" onClick={handleClick}>Confirm</div>
       <div className="icon1">
         <img src="assets/Allocated_" alt="" />
       </div>

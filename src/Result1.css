@@ -1,0 +1,761 @@
+.cardd {
+    position: relative;
+    /* Use relative positioning to allow for horizontal flow */
+    display: inline-block;
+    /* Display the cards inline horizontally */
+    width: 264px;
+    height: 161.6px;
+    border: 1px solid black;
+    margin: 10px;
+    top: 150px;
+    /* Add some margin to separate the cards */
+  }
+  
+  .cardnamed {
+    position: relative;
+    width: 123px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14.4px;
+    line-height: 20px;
+    /* identical to box height */
+  
+  
+    /* TEXT_COLOR/TEXT-900 */
+  
+    color: #0C1116;
+  
+  }
+  
+  .cardd {
+    margin-bottom: 20px;
+    /* Adjust this value to control the space between cards */
+  }
+  
+  .navv {
+    position: absolute;
+    width: 240px;
+    height: 864px;
+    left: 0px;
+    top: 0px;
+    border: 1px solid black;
+  }
+  
+  .topnavv {
+    position: absolute;
+    width: 1550px;
+    height: 91.2px;
+    left: 240px;
+    top: 0px;
+  
+    filter: drop-shadow(0px 0px 4.8px rgba(0, 0, 0, 0.16));
+    border: 1px solid black;
+  }
+  
+  .cardd2 {
+    position: absolute;
+    width: 264px;
+    height: 161.6px;
+    left: 584.4px;
+    top: 174.2px;
+    border: 1px solid black;
+  }
+  
+  .cardnamed2 {
+    position: relative;
+    width: 123px;
+    height: 20px;
+    left: 16px;
+    top: 16px;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14.4px;
+    line-height: 20px;
+    /* identical to box height */
+  
+  
+    /* TEXT_COLOR/TEXT-900 */
+  
+    color: #0C1116;
+  }
+  
+  .alll {
+    position: absolute;
+    width: 171px;
+    height: 22px;
+    left: 250px;
+    top: 123.2px;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+  
+  
+    /* TEXT_COLOR/TEXT-900 */
+  
+    color: #0C1116;
+  
+  }
+  
+  .but {
+    position: absolute;
+    width: 81px;
+    height: 16px;
+    left: 179.4px;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9.6px;
+    line-height: 15px;
+    /* Badge */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 8px;
+    gap: 10px;
+  
+    width: 48px;
+    height: 20px;
+  
+    background: #FFFFFF;
+    border: 1px solid #EAE9EA;
+    border-radius: 16px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /* identical to box height, or 158% */
+  
+  
+    /* SUCCESS_COLOR/SUCCESS-300 */
+  
+  
+  }
+  
+  .startt {
+    box-sizing: border-box;
+    font-size: small;
+  
+    position: absolute;
+    width: 100.8px;
+    height: 23.2px;
+    left: 147.2px;
+    top: 128px;
+  
+    /* SUCCESS_COLOR/SUCCESS-100 */
+  
+    background: #D6F3E9;
+    border-radius: 800px;
+  }
+  
+  .uxui {
+    position: absolute;
+  
+    justify-content: center;
+    align-items: center;
+    padding: 0px 1px;
+    margin-left: -49px;
+    bottom: 107px;
+    /* Adjust this value to move the element up or down */
+    width: 48px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #EAE9EA;
+    border-radius: 20px;
+    width: 32px;
+    height: 12px;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+    text-align: center;
+    color: #777777;
+  }
+  
+  .btnnn {
+  
+  
+  
+    position: absolute;
+  
+    justify-content: center;
+    align-items: center;
+    padding: 0px 1px;
+    margin-left: -92px;
+    bottom: 107px;
+    /* Adjust this value to move the element up or down */
+    width: 48px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #EAE9EA;
+    border-radius: 20px;
+    width: 32px;
+    height: 12px;
+    margin-top: 1px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+    text-align: center;
+    color: #777777;
+  }
+  
+  
+  /* Inside auto layout */
+  
+  
+  
+  
+  
+  .cards-container {
+  
+    gap: 20px;
+    /* Add some spacing between cards */
+  }
+  
+  
+  
+  
+  
+  .btnn {
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 8px;
+    gap: 10px;
+  
+    width: 48px;
+    height: 20px;
+  
+    background: #FFFFFF;
+    border: 1px solid #EAE9EA;
+    border-radius: 20px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    width: 32px;
+    height: 12px;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+  
+    text-align: center;
+  
+    color: #777777;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  
+  }
+  
+  .pp {
+    position: absolute;
+    width: 63px;
+    height: 16px;
+    left: 20px;
+    top: 119px;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 16px;
+  
+  
+  
+    color: #717D8A;
+  }
+  
+  /* ... (your existing CSS code) */
+  
+  /* New styles for cards and user names */
+  .user-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4F5B67;
+    border-bottom: 1px solid #EAE9EA;
+  }
+  
+  .user-name.active {
+    background-color: #F8FDFF;
+  }
+  
+  /* Styles for individual user container */
+  .user-container {
+    margin-top: 20px;
+  }
+  
+  /* Adjusted styles for cards */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .profilee {
+    margin-bottom: 100px;
+  }
+  
+  .cardd {
+    position: relative;
+    width: 264px;
+    height: 161.6px;
+    border: 1px solid black;
+    left: 300px;
+  }
+  
+  .cardnamed {
+    position: relative;
+    width: 123px;
+    height: 20px;
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 14.4px;
+    line-height: 20px;
+    color: #0C1116;
+  }
+  
+  /* ... (rest of your CSS code) */
+  
+  #editorr {
+    width: 36px;
+    height: 35px;
+    right: 100px;
+    left: 100px;
+  
+  
+    /* PRIMARY_BLUE/PRI-2-100 */
+  
+    background: #AFE0F4;
+    border-radius: 900px;
+    position: absolute;
+    left: 161.56%;
+    right: 33.33%;
+    top: -31%;
+    bottom: 32.86%;
+  
+    /* TEXT_COLOR/TEXT-700 */
+  
+    background: #AFE0F4;
+  }
+  
+  .image {
+    position: relative;
+    margin-right: 157px;
+    margin-top: 40px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 16px;
+  }
+  
+  .vectorimage {
+    margin-top: 10px;
+  }
+  
+  
+  .clockimage {
+    margin-right: 231px;
+    margin-top: 10px;
+  }
+  
+  .sub {
+    margin-top: -42px;
+    margin-left: -58px;
+  }
+  
+  .dhasboardd {
+    position: absolute;
+    left: 27.67%;
+    right: 45%;
+    top: 14.35%;
+    bottom: 83.61%;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+  
+  
+    color: #4F5B67;
+  }
+  
+  .takeassessmentt {
+    position: absolute;
+    left: 27.67%;
+    right: 18.67%;
+    top: 22.04%;
+    bottom: 76.2%;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+  
+    /* TEXT_COLOR/TEXT-600 */
+  
+    color: #4F5B67;
+  
+  
+  }
+  
+  .AllocatedAssessment {
+    position: absolute;
+    left: 27.67%;
+    right: 16.33%;
+    top: 29.63%;
+    bottom: 68.33%;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+  
+  
+    /* TEXT_COLOR/TEXT-900 */
+  
+    color: #0C1116;
+  }
+  
+  .Result {
+    position: absolute;
+    left: 27.67%;
+    right: 56%;
+    top: 37.41%;
+    bottom: 60.56%;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+  
+  
+    /* TEXT_COLOR/TEXT-600 */
+  
+    color: #4F5B67;
+  }
+  
+  .TeamLeaders {
+    position: absolute;
+    left: 27.67%;
+    right: 34.33%;
+    top: 45.09%;
+    bottom: 52.87%;
+  
+    /* Menu/Medium/16px */
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+  
+  
+    /* TEXT_COLOR/TEXT-600 */
+  
+    color: #4F5B67;
+  
+  }
+  
+  .Settings {
+    position: absolute;
+    left: 27.67%;
+    right: 51%;
+    top: 52.78%;
+    bottom: 45.19%;
+  
+    /* Menu/Medium/16px */
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+  
+  
+    /* TEXT_COLOR/TEXT-600 */
+  
+    color: #4F5B67;
+  }
+  
+  .logout {
+    position: absolute;
+    width: 1016px;
+    height: 516px;
+    left: -344px;
+    top: 619px;
+  }
+  
+  .nav {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+  
+    background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
+  
+  }
+  
+  .topnav {
+    position: absolute;
+    left: 15.890;
+    right: 0%;
+    top: 0%;
+    bottom: 89.44%;
+  
+    background: linear-gradient(138.51deg, #F8FDFF 59.84%, #F6FAEF 116.14%);
+  }
+  
+  .Allocated {
+    position: absolute;
+    width: 256px;
+    height: 33px;
+    left: 340px;
+    margin-right: 800px;
+    top: 31px;
+  
+    /* H1 heading/Semibold/24px */
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+  
+  
+    /* TEXT_COLOR/TEXT-800 */
+  
+    color: #242D35;
+  }
+  
+  .companylogoo {
+    position: absolute;
+    width: 33.44px;
+    height: 33.44px;
+    left: 35.57px;
+    top: 35.57px;
+  
+  }
+  
+  .companynamee {
+    position: absolute;
+    left: 40%;
+    right: 28.08%;
+    top: 4.63%;
+    bottom: 92.38%;
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19.9208px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+  
+    color: #0C1116;
+  }
+  
+  .companynamee1 {
+    position: absolute;
+    left: 40%;
+    right: 28.08%;
+    top: 7.22%;
+    bottom: 90.96%;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9.96042px;
+    line-height: 14px;
+    /* identical to box height */
+  
+    letter-spacing: 0.09em;
+  
+    /* TEXT_COLOR/TEXT-700 */
+  
+    color: #373F47;
+  }
+  
+  .testt {
+    position: absolute;
+    width: 760.55px;
+    height: 330.12px;
+    left: 20.9px;
+    /* top: 200.56px; */
+    padding-top: 100px;
+    /* border: 1px solid black; */
+  }
+  
+  .logo11img {
+    position: relative;
+    right: 27px;
+  }
+  
+  .logonamee {
+    position: absolute;
+    left: 53px;
+  }
+  
+  ̥.top-bar11 {
+    position: absolute;
+    width: 414px;
+    height: 37.9px;
+    left: 241.9px;
+    top: 22.06px;
+    /* border: 1px solid black; */
+  }
+  
+  .AllocatedAssessmentt {
+    position: absolute;
+    width: 182px;
+    height: 23px;
+    left: 241.9px;
+    top: 22.06px;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17.075px;
+    line-height: 23px;
+  
+    /* TEXT_COLOR/TEXT-800 */
+  
+    color: #242D35;
+  }
+  
+  .viewcompletee {
+    position: absolute;
+    width: 414px;
+    height: 13px;
+    left: 170.9px;
+    top: 46.96px;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9.24896px;
+    line-height: 13px;
+    /* identical to box height */
+  
+  
+    /* TEXT_COLOR/TEXT-400 */
+  
+    color: #A8B0B9;
+  }
+  
+  .searchh {
+    position: absolute;
+    width: 274.62px;
+    height: 30px;
+    left: 1244.21px;
+    top: 26.32px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  
+  .search h6 {
+    position: relative;
+    bottom: 23px;
+    left: 40px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 13px;
+    color: #A8B0B9;
+  }
+  
+  #searchhh {
+    position: relative;
+    /* 
+          left: 5px; */
+    left: -80px;
+    top: -20px;
+  }
+  
+  #notificationn {
+    position: relative;
+    top: 25px;
+    left: 920px;
+  }
+  
+  .rounded-circlee {
+    position: relative;
+    left: 900px;
+    top: 30px;
+  }
+  
+  .namee {
+    position: absolute;
+    width: 90px;
+    height: 17px;
+    left: 1655.39px;
+    top: 31.49px;
+  
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.8062px;
+    line-height: 17px;
+  
+    /* TEXT_COLOR/TEXT-800 */
+  
+    color: #242D35;
+  }

@@ -12,6 +12,7 @@ import TeamMembers from './TeamMembers';
 import TeamMembersCard from './TeamMembersCard';
 import AllotedAssessment from './AllotedAssessment';
 import Allocated_Assessment from './Allocated_Assessment';
+import Result1 from './Result1';
 
 function App() {
   return (
@@ -25,10 +26,12 @@ function App() {
           <Route path="/AllocatedAssessment" element={<AllocatedAssessmentDetail />} />
           <Route path="/Allocated" element={<Allocated_Assessment />} />
           <Route path="/Alloted" element={<AllotedAssessment />} />
+          <Route path="/Result" element={<Result1 />} />
           <Route path="/TeamMembersCard" element={<TeamMembersCard />} />
-          <Route path="/TeamMembers/:userId" element={<TeamMembers />} />
+          <Route path="/TeamMembers/:cardId" element={<TeamMembers />} />
           <Route path="/Settings" element={<Settings />} />
           <Route path="/" element={<Navigate to="/Login" />} />
+
         </Routes>
       </BrowserRouter>
     </div>

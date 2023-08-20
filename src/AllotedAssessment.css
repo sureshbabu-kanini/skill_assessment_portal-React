@@ -1,78 +1,81 @@
-.sidebarAlloted{
+.sidebar-alloted{
     position: absolute;
-    width: 213.44px;
-    height: 768.38px;
+    width: 280px;
+    height: 749px;
     left: 0px;
     top: 0px;
     border: 0.711458px solid #D6DADE;
     
 }
 
-.topbarAlloted{
+.topbar-alloted{
     position: absolute;
-    width: 1152.56px;
+    width: 1399.56px;
     height: 81.11px;
     left: 213.44px;
+    margin-left:68px;
     top: 0px;
     filter: drop-shadow(0px 0px 4.26875px rgba(0, 0, 0, 0.16));
     border: 0.711458px solid #D6DADE;
 }
 
-.searchhereAlloted{  
+.searchhere-alloted{  
 position: absolute;
 width: 274.62px;
 height: 28.46px;
-left: 845.21px;
+left: 918.21px;
 top: 26.32px;
 }
 
-.searchtopicAlloted{
+.searchtopic-alloted{
     position: absolute;
-    width: 355.67px;
+    width: 450.67px;
     height: 39.84px;
-    right:522px;
+    right:430px;
     top: 90.26px;
     border: 0.711458px solid #D6DADE;
 
 }
 
-#searchlogoAlloted{
+#searchlogo-alloted{
     position: absolute;
-    right:535px;
+    right:450px;
     top: 105px;
 }
 
-.courselistAlloted{
+.courselist-alloted {
     box-sizing: border-box;
     position: absolute;
-    width: 357.67px;
-    height: 433.28px;
-    left: 234.78px;
+    width: 457.67px;
+    left: 307.78px;
     top: 182.13px;
     overflow-y: scroll;
     background: #FFFFFF;
     border: 0.711458px solid #D6DADE;
     border-radius: 5.69167px;
+    display: flex;
+    flex-direction: column; /* Change the flex direction to column */
 }
 
-.assessmentdeetAlloted{
+
+.assessmentdeet-alloted{
 box-sizing: border-box;
 position: absolute;
-width: 722.13px;
-height: 500.16px;
-left: 620px;
-top: 109.19px;
+width: 822.13px;
+height: 515.16px;
+left: 820px;
+top: 115.19px;
 background: #FFFFFF;
 opacity: 0.8;
 border: 0.711458px solid #D6DADE;
 border-radius: 5.69167px;   
 }
 
-.nextbtnAlloted{
+.nextbtn-alloted{
 position: absolute;
 width: 101.03px;
 height: 31.3px;
-left: 1218.73px;
+left: 1540.73px;
 top: 666.64px;
 background: #7BCCED;
 border-radius: 2.84583px;
@@ -90,13 +93,13 @@ border-radius: 2.84583px;
     border-radius: 4.26875px;
 }
 
-#dropdowndeptAlloted{
+#dropdowndept-alloted{
     position: absolute;
     top:184px;
     right:155px;
 }
 
-#descriptionAlloted{ 
+#description-alloted{ 
 color: #D6DADE;
 box-sizing: border-box;
 position: absolute;
@@ -107,9 +110,10 @@ top: 102px;
 background: #FFFFFF;
 border: 1px solid #D6DADE;
 border-radius: 6px;
+   
 }
 
-.selectlevelAlloted{
+.selectlevel-alloted{
     position: absolute;
     height: 19px;
     left:20.46px;
@@ -124,7 +128,7 @@ border-radius: 6px;
     
 }
 
-.assessmenttxtAlloted{
+.assessmenttxt-alloted{
     position: absolute;
     width: 159px;
     height: 23px;
@@ -140,7 +144,7 @@ border-radius: 6px;
 }
 
 
-.lvlAlloted{
+.lvl-alloted{
 position: absolute;
 width: 446.51px;
 height: 16.71px;
@@ -148,56 +152,56 @@ left: 648.46px;
 top: 417.25px;
 }
 
-.numofquestionAlloted{
+.numofquestion-alloted{
 box-sizing: border-box;
 position: absolute;
 width:273.2px;
 height:39.84px;
 right:800px;
-bottom:2px;
+top:10px;
 background: #FFFFFF;
 border: 1px solid #D6DADE;
 border-radius: 6px;
 }
 
-.durationAlloted{
+.duration-alloted{
 position: absolute;
 width: 273.2px;
 height:39.84px;
-right:795px;
-bottom:70px;
+right:800px;
+bottom:50px;
 background: #FFFFFF;
 border: 1px solid #D6DADE;
 border-radius: 6px;
 }
 
-#dateAlloted{
+#date-alloted{
 position: absolute;
 width: 273.2px;
 height: 39.81px;
-right:500px;
-bottom:70px;
+right:470px;
+bottom:50px;
 background: #FFFFFF;
 border: 1px solid #D6DADE;
 border-radius: 6px;
 }
 
 
-#radio1Alloted{
+#radio1-alloted{
     position: absolute;
-    right: 680px;
-    top: 298px;
+    right:779px;
+    top: 307px;
 }
 
-.logo1Alloted{
+.logo1-alloted{
     position: absolute;
-    right: 668px;
-    bottom: 185px;
+    right: 763px;
+    bottom: 190px;
 }
-.basicAlloted{
+.basic-alloted{
 position: absolute;
-right:630px;
-top: 299px;
+right:720px;
+top: 308px;
 width: 36px;
 height: 16.9px;
 font-family: 'Manrope';
@@ -208,22 +212,22 @@ line-height: 16px;
 color: #717D8A;
 }
 
-#radio2Alloted{
+#radio2-alloted{
     position: absolute;
-    right: 600px;
-    top: 298px;
+    right: 680px;
+    top: 307px;
 }
 
-.logo2Alloted{
+.logo2-alloted{
     position: absolute;
-    right:587px;
-    top:300px;
+    right:664px;
+    top:309px;
 }
 
-.intermediateAlloted{
+.intermediate-alloted{
 position: absolute;
-right:550px;
-top: 299px;
+right:620px;
+top: 307px;
 width: 36px;
 height: 16.9px;
 font-family: 'Manrope';
@@ -234,23 +238,23 @@ line-height: 16px;
 color: #717D8A;
 }
 
-#radio3Alloted{
+#radio3-alloted{
     position: absolute;
-    right:470px;
-    top: 297px;
+    right:535px;
+    top: 307px;
 }
 
-.logo3Alloted{
+.logo3-alloted{
     position: absolute;
-    right:457px;
-    top: 300px;
+    right:517px;
+    top: 307px;
 
 }
 
-.advancedAlloted{
+.advanced-alloted{
 position: absolute;
-right:420px;
-top: 300px;
+right:475px;
+top: 307px;
 width: 36px;
 height: 16.9px;
 font-family: 'Manrope';
@@ -261,22 +265,22 @@ line-height: 16px;
 color: #717D8A;
 }
 
-#radio4Alloted{
+#radio4-alloted{
     position: absolute;
-    right:350px;
-    top: 297px;
+    right:410px;
+    top: 305px;
 }
 
-.logo4Alloted{
+.logo4-alloted{
     position: absolute;
-    right:330px;
-    top: 300px;
+    right:390px;
+    top: 307px;
 }
 
-.upskillAlloted{
+.upskill-alloted{
 position: absolute;
-right:292px;
-top: 298px;
+right:348px;
+top: 307px;
 width: 36px;
 height: 16.9px;
 font-family: 'Manrope';

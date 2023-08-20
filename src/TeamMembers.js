@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 export default function TeamMembers() {
-  const { userId } = useParams(); // Extract the userId from the URL
+  const { cardId } = useParams(); // Extract the userId from the URL
   const [userDetails, setUserDetails] = useState(null);
   const [assessmentTopics, setAssessmentTopics] = useState([]);
   const [userResults, setUserResults] = useState([]);
@@ -15,7 +15,7 @@ export default function TeamMembers() {
   // Function to fetch user details based on user ID
   const fetchUserDetails = async () => {
     try {
-      const response = await axios.get(`https://localhost:7198/api/Users/${userId}`);
+      const response = await axios.get(`https://localhost:7198/api/Users/${cardId}`);
       setUserDetails(response.data);
     } catch (error) {
       console.error(error);
@@ -24,16 +24,16 @@ export default function TeamMembers() {
 
   const fetchAssessmentTopics = async () => {
     try {
-      const response = await axios.get(`https://localhost:7198/api/Assessments/assessment-topics/user/${userId}`);
+      const response = await axios.get(`https://localhost:7198/api/Assessments/assessment-topics/user/${cardId}`);
       setAssessmentTopics(response.data);
     } catch (error) {
       console.error(error);
     }
   };
 
-  const fetchResultsByUserId = async (userId, index) => {
+  const fetchResultsByUserId = async (cardId, index) => {
     try {
-      const response = await axios.get(`https://localhost:7198/api/Results/GetResultsByUserId/${userId}`);
+      const response = await axios.get(`https://localhost:7198/api/Results/GetResultsByUserId/${cardId}`);
       setUserResults(response.data);
       console.log('User Results:', response.data);
       setSelectedIndex(index); // Update the selected index
@@ -42,9 +42,9 @@ export default function TeamMembers() {
     }
   };
 
-  const fetchResultCountByUserId = async (userId) => {
+  const fetchResultCountByUserId = async (cardId) => {
     try {
-      const response = await axios.get(`https://localhost:7198/api/Results/GetResultCountByUserId/${userId}`);
+      const response = await axios.get(`https://localhost:7198/api/Results/GetResultCountByUserId/${cardId}`);
       setResultCount(response.data);
       console.log(response.data);
     } catch (error) {
@@ -55,11 +55,11 @@ export default function TeamMembers() {
   const fetchTotalPoints = async () => {
     try {
       const userID = localStorage.getItem('userID');
-      if (!userID) return;
+      if (!cardId) return;
 
       // Add random query parameter to avoid caching
       const randomQueryParam = Math.random().toString(36).substring(7);
-      const response = await fetch(`https://localhost:7198/api/Results/GetTotalPointsByUserId/${userID}?rnd=${randomQueryParam}`);
+      const response = await fetch(`https://localhost:7198/api/Results/GetTotalPointsByUserId/${cardId}?rnd=${randomQueryParam}`);
       const data = await response.json();
       if (data !== null && !isNaN(data)) {
         setTotalPoints(String(data));
@@ -84,8 +84,8 @@ export default function TeamMembers() {
   useEffect(() => {
     fetchUserDetails();
     fetchAssessmentTopics();
-    fetchResultsByUserId(userId, selectedIndex);
-    fetchResultCountByUserId(userId);
+    fetchResultsByUserId(cardId, selectedIndex);
+    fetchResultCountByUserId(cardId);
     // Fetch the initial data for the default selected index
 
     // Get the button that opens the modal
@@ -102,17 +102,17 @@ export default function TeamMembers() {
     // When the user clicks the button, open the modal and fetch the corresponding results
     btn.addEventListener('click', function () {
       modal.style.display = 'block';
-      fetchResultsByUserId(userId, 0); // Display results for index 0
+      fetchResultsByUserId(cardId, 0); // Display results for index 0
     });
 
     btn2.addEventListener('click', function () {
       modal.style.display = 'block';
-      fetchResultsByUserId(userId, 1); // Display results for index 1
+      fetchResultsByUserId(cardId, 1); // Display results for index 1
     });
 
     btn3.addEventListener('click', function () {
       modal.style.display = 'block';
-      fetchResultsByUserId(userId, 2); // Display results for index 2
+      fetchResultsByUserId(cardId, 2); // Display results for index 2
     });
 
     // When the user clicks on <span> (x), close the modal
@@ -126,7 +126,7 @@ export default function TeamMembers() {
         modal.style.display = 'none';
       }
     };
-  }, [userId, selectedIndex]);
+  }, [cardId, selectedIndex]);
   
   return (
     <>
